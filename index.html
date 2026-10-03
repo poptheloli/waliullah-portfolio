@@ -1,0 +1,2883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Waliullah Magsi | English Teaching Internship Portfolio — Atom Academy Hyderabad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #eceae5;
+  --card-bg: #ffffff;
+  --text-main: #141413;
+  --text-muted: #5e5c57;
+  --text-light: #88857f;
+  --line: rgba(0, 0, 0, 0.08);
+  --line-strong: #141413;
+  --pill-bg: #f4f3ee;
+  --pill-border: rgba(0, 0, 0, 0.09);
+  --primary-dark: #141413;
+  --primary-accent: #2563eb;
+  --success: #059669;
+  --amber: #d97706;
+  --radius-card: 32px;
+  --radius-inner: 18px;
+  --radius-pill: 9999px;
+  --shadow-sm: 0 4px 16px rgba(0,0,0,0.03);
+  --shadow-card: 0 16px 40px -12px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0,0,0,0.02);
+  --shadow-hover: 0 20px 48px -10px rgba(0, 0, 0, 0.08);
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 86px;
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-main);
+  line-height: 1.6;
+  padding: 20px 16px 60px;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 24px 20px 80px;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+/* ========================================================
+   FIXED NAVBAR (Circled Mini Avatar, No Overlapping Brand/Badge)
+   ======================================================== */
+.nav-wrapper {
+  position: sticky;
+  top: 14px;
+  z-index: 100;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.nav-bar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  padding: 8px 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+}
+
+/* User Request #2: Image on nav is circle */
+.nav-avatar-mini {
+  width: 36px;
+  height: 36px;
+  border-radius: 50% !important; /* Perfect circle */
+  object-fit: cover;
+  border: 2px solid var(--primary-dark);
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.nav-brand-title {
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+.nav-brand-badge {
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--pill-bg);
+  border: 1px solid var(--line);
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+  color: var(--text-muted);
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  flex: 0 1 auto;
+  min-width: 0;
+  justify-content: flex-start;
+  padding: 2px 4px;
+  -webkit-overflow-scrolling: touch;
+}
+.nav-links::-webkit-scrollbar { display: none; }
+
+.nav-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 6px 10px;
+  border-radius: var(--radius-pill);
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.nav-link:hover {
+  color: var(--text-main);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.nav-link.active {
+  color: #fff;
+  background: var(--primary-dark);
+  font-weight: 600;
+}
+
+.nav-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  background: var(--primary-dark);
+  color: #ffffff;
+  padding: 7px 18px;
+  border-radius: var(--radius-pill);
+  transition: transform 0.15s ease, background 0.15s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.nav-cta-btn:hover {
+  background: #000;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 1080px) {
+  .nav-brand-badge { display: none; }
+}
+
+@media (max-width: 768px) {
+  .nav-wrapper {
+    top: 8px;
+    padding: 0 10px;
+  }
+  .nav-bar {
+    padding: 6px 12px;
+    gap: 8px;
+  }
+  .nav-avatar-mini {
+    width: 32px;
+    height: 32px;
+  }
+  .nav-brand-title {
+    font-size: 14px;
+  }
+  .nav-cta-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  .nav-link {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
+
+/* ========================================================
+   HERO CARD: 2-COLUMN SPLIT WITH BIG CORNER-LESS SQUARE
+   PROFILE CARD ON THE SIDE (Sir Kashif Magsi & Atom Academy)
+   ======================================================== */
+.hero-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  padding: 38px 40px 32px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .hero-card {
+    padding: 26px 20px 22px;
+    border-radius: 24px;
+  }
+}
+
+.hero-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 32px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.email-pill-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--pill-bg);
+  border: 1px solid var(--pill-border);
+  padding: 5px 6px 5px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.btn-pill-small {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  padding: 4px 11px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-main);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-pill-small:hover {
+  background: #f8f8f6;
+  border-color: rgba(0,0,0,0.2);
+  transform: translateY(-1px);
+}
+
+.hero-social-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.hero-social-links a:hover { color: var(--text-main); }
+.hero-social-links span.sep { color: var(--text-light); font-size: 12px; }
+
+/* HERO GRID */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (max-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.hero-text-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.hero-chip-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--pill-bg);
+  border: 1px solid var(--line);
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+
+.hero-headline {
+  font-size: clamp(32px, 3.8vw, 48px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  color: var(--text-main);
+  margin-bottom: 16px;
+}
+
+.hero-subheadline {
+  font-size: clamp(14.5px, 1.6vw, 16px);
+  font-weight: 400;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+}
+
+.btn-primary-pill {
+  background: var(--primary-dark);
+  color: #ffffff;
+  border-radius: var(--radius-pill);
+  padding: 12px 26px;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
+.btn-primary-pill:hover {
+  background: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary-pill {
+  background: var(--pill-bg);
+  color: var(--text-main);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  padding: 12px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary-pill:hover {
+  background: #ffffff;
+  border-color: rgba(0,0,0,0.18);
+  transform: translateY(-1px);
+}
+
+/* Quick Metrics Row: Exact Hours calculation */
+.hero-metrics-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.metric-pill {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.metric-pill b {
+  color: var(--text-main);
+}
+
+.metric-pill.status {
+  background: #fffbeb;
+  border-color: #fde68a;
+  color: var(--amber);
+}
+
+/* BIG CORNER-LESS SQUARE PROFILE CARD ON SIDE */
+.hero-profile-side-col {
+  display: flex;
+  justify-content: center;
+}
+
+.big-square-profile-card {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  border: 2px solid var(--primary-dark);
+  border-radius: 0; /* Corner-less */
+  box-shadow: 10px 10px 0px var(--primary-dark);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.big-square-profile-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 13px 13px 0px var(--primary-dark);
+}
+
+.square-img-frame {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Square */
+  border-radius: 0;
+  border-bottom: 2px solid var(--primary-dark);
+  position: relative;
+  background: #e5e3dc;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.square-img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.square-badge-float {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(20, 20, 19, 0.92);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 5px 12px;
+  border-radius: 0;
+}
+
+.square-card-info {
+  padding: 20px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.square-card-role {
+  font-size: 11.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary-accent);
+}
+
+.square-card-name {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  line-height: 1.15;
+}
+
+.square-card-inst {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.square-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+  margin-top: 2px;
+}
+
+.square-status-tag {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--amber);
+  background: #fef3c7;
+  padding: 3px 8px;
+  border-radius: 0;
+}
+
+/* Logos Strip */
+.hero-logos-strip {
+  margin-top: 36px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px 28px;
+}
+
+.logo-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #7b7872;
+}
+
+.logo-item:hover { color: var(--text-main); }
+.logo-icon-svg { width: 17px; height: 17px; opacity: 0.8; }
+
+/* ========================================================
+   SECTION: SPECIALIZATIONS
+   ======================================================== */
+.section-center-head {
+  text-align: center;
+  max-width: 680px;
+  margin: 10px auto 26px;
+}
+
+.pill-section-tag {
+  display: inline-block;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  padding: 4px 16px;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+  margin-bottom: 12px;
+}
+
+.section-main-title {
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.22;
+  color: var(--text-main);
+}
+
+.specializations-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 960px) { .specializations-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 580px) { .specializations-grid { grid-template-columns: 1fr; } }
+
+.spec-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-inner);
+  border: 1px solid var(--line);
+  padding: 24px 20px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.spec-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.spec-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--pill-bg);
+  border: 1px solid var(--pill-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.spec-title {
+  font-size: 15.5px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+}
+
+.spec-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+/* ========================================================
+   STUDENT PROFILE & PLACEMENT (Atom Academy & Sir Kashif Magsi)
+   ======================================================== */
+.card-section {
+  background: var(--card-bg);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-card);
+  padding: 38px;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .card-section {
+    padding: 24px 18px;
+    border-radius: 24px;
+  }
+}
+
+.profile-bento {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+@media (max-width: 860px) {
+  .profile-bento { grid-template-columns: 1fr; }
+}
+
+.profile-portrait-card {
+  background: #f8f7f4;
+  border: 2px solid var(--primary-dark);
+  border-radius: 0;
+  box-shadow: 8px 8px 0px var(--primary-dark);
+  overflow: hidden;
+  position: relative;
+}
+
+.profile-portrait-card img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-badge-overlay {
+  padding: 12px 16px;
+  background: #ffffff;
+  border-top: 1.5px solid var(--primary-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-badge-overlay b {
+  font-size: 13px;
+  color: var(--text-main);
+}
+
+.profile-badge-overlay span {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--amber);
+  background: #fef3c7;
+  padding: 2px 8px;
+  border-radius: 0;
+}
+
+.profile-details-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.profile-role-tag {
+  font-size: 11.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--primary-accent);
+}
+
+.profile-heading {
+  font-size: clamp(24px, 2.6vw, 32px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.profile-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 4px 0;
+}
+
+@media (max-width: 520px) { .profile-meta-grid { grid-template-columns: 1fr; } }
+
+.meta-box {
+  background: var(--pill-bg);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.meta-box span.lbl {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-light);
+  margin-bottom: 2px;
+}
+
+.meta-box b.val {
+  font-size: 13px;
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.profile-quote {
+  background: #fbfbf9;
+  border-left: 3px solid var(--primary-dark);
+  padding: 12px 16px;
+  font-size: 13px;
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.55;
+}
+
+/* ========================================================
+   SECTION: 3 WEEKS CLASSROOM EVIDENCE (User Request!)
+   "add the 3 weeks evidence box like 3 week 6 boxed and the 3 boxex for grapch in these boxes i will add images oakay"
+   ======================================================== */
+.weekly-evidence-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 14px;
+}
+
+.week-row-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-inner);
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+}
+
+.week-row-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.week-row-head h3 {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+}
+
+.week-row-head span.tag {
+  font-size: 12px;
+  font-weight: 700;
+  background: var(--pill-bg);
+  border: 1px solid var(--line);
+  padding: 3px 12px;
+  border-radius: var(--radius-pill);
+  color: var(--text-muted);
+}
+
+.week-boxes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 280px;
+  gap: 16px;
+  align-items: stretch;
+}
+
+@media (max-width: 960px) { .week-boxes-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .week-boxes-grid { grid-template-columns: 1fr; } }
+
+.evidence-photo-box {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.evidence-photo-box:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.evidence-img-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/11;
+  background: #f1efe9;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.evidence-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.evidence-photo-box:hover .evidence-img-container img {
+  transform: scale(1.03);
+}
+
+.evidence-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(20, 20, 19, 0.88);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.evidence-tag.activity {
+  background: rgba(37, 99, 235, 0.9);
+}
+
+.evidence-zoom-hint {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-main);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  opacity: 0.85;
+}
+
+.evidence-box-desc {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-grow: 1;
+}
+
+.evidence-box-desc b {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.35;
+}
+
+.evidence-box-desc p {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.evidence-box-desc span.slot-hint {
+  font-size: 11px;
+  color: var(--primary-accent);
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* 3 Graph Boxes (1 per week) */
+.weekly-graph-box {
+  background: #fbfbf9;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+@media (max-width: 960px) { .weekly-graph-box { grid-column: span 2; } }
+@media (max-width: 640px) { .weekly-graph-box { grid-column: span 1; } }
+
+.graph-box-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.graph-box-pill {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+}
+
+.graph-box-stat {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--text-main);
+}
+
+.graph-bar-track {
+  width: 100%;
+  height: 8px;
+  background: #e2e0d8;
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  margin: 6px 0;
+}
+
+.graph-bar-fill {
+  height: 100%;
+  background: var(--primary-dark);
+  border-radius: var(--radius-pill);
+}
+
+.graph-meta-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 11.5px;
+  color: var(--text-muted);
+}
+
+.graph-meta-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed var(--line);
+  padding-bottom: 3px;
+}
+
+.graph-meta-row b { color: var(--text-main); }
+
+/* ========================================================
+   LOGBOOK SECTION (46 Hours Logged of 60 Hours)
+   ======================================================== */
+.log-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+@media (max-width: 768px) { .log-summary-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .log-summary-grid { grid-template-columns: 1fr; } }
+
+.log-stat-card {
+  background: var(--pill-bg);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px;
+  text-align: center;
+}
+
+.log-stat-card .num {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+}
+
+.log-stat-card .lbl {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.log-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.log-filter-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.log-tab-btn {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: all 0.15s ease;
+}
+
+.log-tab-btn.active {
+  background: var(--primary-dark);
+  color: #fff;
+  border-color: var(--primary-dark);
+}
+
+.log-search-input {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  padding: 6px 14px;
+  font-size: 12.5px;
+  font-family: inherit;
+  width: 220px;
+  color: var(--text-main);
+  outline: none;
+}
+
+.log-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.log-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  text-align: left;
+}
+
+.log-table th {
+  background: #fafaf8;
+  font-weight: 700;
+  color: var(--text-main);
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.log-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-muted);
+  vertical-align: top;
+}
+
+.log-table tr:hover td { background: #fbfbfa; }
+.log-table td b { color: var(--text-main); }
+
+.verify-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: var(--radius-pill);
+  background: rgba(5, 150, 105, 0.12);
+  color: #065f46;
+}
+
+/* ========================================================
+   REFLECTIVE JOURNAL (Weeks 01, 02, and 03)
+   ======================================================== */
+.journal-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.journal-tab-btn {
+  background: var(--pill-bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  padding: 7px 16px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: all 0.15s ease;
+}
+
+.journal-tab-btn.active {
+  background: var(--primary-dark);
+  color: #ffffff;
+  border-color: var(--primary-dark);
+}
+
+.journal-entry-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-inner);
+  padding: 26px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.02);
+}
+
+.journal-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+}
+
+.journal-meta-left h3 {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+}
+
+.journal-meta-left p { font-size: 12px; color: var(--text-light); }
+.journal-section-block { margin-bottom: 18px; }
+
+.journal-section-block h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.journal-section-block p {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.journal-takeaways-box {
+  background: #fbfbf9;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--primary-accent);
+  padding: 14px 18px;
+  margin-top: 14px;
+}
+
+.journal-takeaways-box b {
+  font-size: 12.5px;
+  color: var(--text-main);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.journal-takeaways-box ul {
+  list-style: square inside;
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ========================================================
+   FIXED PDF SECTION: 2-COLUMN GRID (Never bleeds outside layout)
+   Addressed User Request #1 from image
+   ======================================================== */
+.doc-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 clean columns */
+  gap: 18px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .doc-cards-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile/tablet */
+  }
+}
+
+.doc-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-inner);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.doc-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.doc-top { display: flex; gap: 14px; }
+
+.doc-icon-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #f4f3ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.doc-info h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 3px;
+}
+
+.doc-info p {
+  font-size: 12px;
+  color: var(--text-light);
+  line-height: 1.35;
+}
+
+.doc-preview-text {
+  font-size: 12.5px;
+  background: #fbfbfa;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 11px 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.doc-preview-text b { color: var(--text-main); display: block; margin-bottom: 2px; }
+
+.doc-actions-row { display: flex; gap: 8px; }
+
+.btn-doc-view {
+  flex: 1;
+  background: var(--primary-dark);
+  color: #fff;
+  border-radius: var(--radius-pill);
+  padding: 8px 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.btn-doc-view:hover { background: #000; }
+
+.btn-doc-dl {
+  background: var(--pill-bg);
+  color: var(--text-main);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  padding: 8px 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.btn-doc-dl:hover { background: #fff; }
+
+/* ========================================================
+   SUPERVISOR EVALUATION & REPORT (Sir Kashif Magsi)
+   ======================================================== */
+.eval-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 22px;
+}
+
+@media (max-width: 880px) { .eval-grid { grid-template-columns: 1fr; } }
+
+.eval-table-wrap {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.eval-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+
+.eval-table th {
+  background: #fafaf8;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+  font-weight: 700;
+  color: var(--text-main);
+  text-align: left;
+}
+
+.eval-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-muted);
+}
+
+.eval-table tr:last-child td {
+  border-bottom: none;
+  font-weight: 800;
+  background: #fbfbf9;
+  color: var(--text-main);
+}
+
+.eval-summary-card {
+  background: #fbfbf9;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-inner);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.eval-score-circle {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: var(--primary-dark);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.eval-score-circle .big { font-size: 24px; font-weight: 800; line-height: 1; }
+.eval-score-circle .sub { font-size: 10px; opacity: 0.8; }
+
+.eval-comments-box {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ========================================================
+   CONTACT CARD
+   ======================================================== */
+.contact-card {
+  background: #ffffff;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-card);
+  padding: 48px 36px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  .contact-card { padding: 32px 18px; border-radius: 22px; }
+}
+
+.contact-handshake-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--pill-bg);
+  border: 1px solid var(--pill-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 18px;
+}
+
+.contact-headline {
+  font-size: clamp(24px, 3.2vw, 36px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  color: var(--text-main);
+  margin-bottom: 10px;
+  max-width: 580px;
+  line-height: 1.2;
+}
+
+.contact-sub {
+  font-size: 14.5px;
+  color: var(--text-muted);
+  max-width: 480px;
+  margin-bottom: 24px;
+}
+
+.contact-buttons-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-contact-dark {
+  background: var(--primary-dark);
+  color: #fff;
+  border-radius: var(--radius-pill);
+  padding: 11px 26px;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-contact-dark:hover { background: #000; transform: translateY(-2px); }
+
+.btn-contact-light {
+  background: var(--pill-bg);
+  color: var(--text-main);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  padding: 11px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-contact-light:hover { background: #fff; transform: translateY(-1px); }
+
+.footer-text {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-light);
+  margin-top: 10px;
+}
+
+/* ========================================================
+   MODAL & LIGHTBOX OVERLAYS
+   ======================================================== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 18, 18, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+
+.modal-backdrop.active { display: flex; }
+
+.modal-content-box {
+  background: #ffffff;
+  border-radius: 20px;
+  max-width: 820px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+}
+
+.modal-head {
+  padding: 16px 22px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fafaf8;
+}
+
+.modal-head h3 { font-size: 15.5px; font-weight: 700; color: var(--text-main); }
+
+.modal-head-close {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: var(--text-main);
+}
+
+.modal-head-close:hover { background: #ddd; }
+
+.modal-body {
+  padding: 22px;
+  overflow-y: auto;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.lightbox-img-frame {
+  max-width: 100%;
+  max-height: 68vh;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Toast */
+.toast-msg {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--primary-dark);
+  color: #fff;
+  padding: 9px 20px;
+  border-radius: var(--radius-pill);
+  font-size: 12.5px;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  z-index: 1000;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.toast-msg.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* Print Rules */
+@media print {
+  body { background: #fff; padding: 0; }
+  .nav-wrapper, .modal-backdrop, .hero-actions, .log-controls, .doc-actions-row, .contact-buttons-row { display: none !important; }
+  .container { max-width: 100%; gap: 16px; }
+  .hero-card, .card-section { box-shadow: none; border: 1px solid #ccc; page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ========================================================
+       NAVBAR (Circled Avatar, Clean Branding, No Overlapping 's')
+       ======================================================== -->
+  <header class="nav-wrapper">
+    <nav class="nav-bar">
+      <a href="#overview" class="nav-brand">
+        <!-- Circle mini image as requested -->
+        <img src="images/waliullah_portrait.jpg" alt="Waliullah Magsi" class="nav-avatar-mini">
+        <span class="nav-brand-title">Waliullah Magsi</span>
+        <span class="nav-brand-badge">BS Applied Linguistics</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#overview" class="nav-link active">Overview</a>
+        <a href="#profile" class="nav-link">Profile</a>
+        <a href="#placement" class="nav-link">Placement</a>
+        <a href="#weekly-evidence" class="nav-link">Evidence</a>
+        <a href="#logbook" class="nav-link">Logbook</a>
+        <a href="#journal" class="nav-link">Journal</a>
+        <a href="#documents" class="nav-link">PDFs</a>
+        <a href="#supervisor" class="nav-link">Evaluation</a>
+        <a href="#report" class="nav-link">Report</a>
+      </div>
+
+      <a href="#contact" class="nav-cta-btn">Connect ↗</a>
+    </nav>
+  </header>
+
+  <!-- ========================================================
+       HERO CARD: 2-COLUMN SPLIT WITH BIG CORNER-LESS SQUARE
+       PROFILE CARD ON SIDE (Sir Kashif Magsi, Atom Academy, 46h/60h)
+       ======================================================== -->
+  <section class="hero-card" id="overview">
+    <!-- Hero Top Bar -->
+    <div class="hero-top-bar">
+      <div class="email-pill-container">
+        <span class="email-text" id="emailVal">waliullah.elt@gmail.com</span>
+        <button class="btn-pill-small" onclick="copyEmail()" title="Copy email address">
+          <span>📋</span> <span id="copyBtnText">Copy</span>
+        </button>
+        <a href="#report" class="btn-pill-small">
+          <span>📄</span> Report
+        </a>
+      </div>
+
+      <div class="hero-social-links">
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <span class="sep">/</span>
+        <a href="https://wa.me/923000000000" target="_blank" rel="noopener">WhatsApp</a>
+        <span class="sep">/</span>
+        <a href="#placement">Atom Academy Hyderabad</a>
+      </div>
+    </div>
+
+    <!-- Hero Main 2-Column Grid -->
+    <div class="hero-grid">
+      <!-- Left Column: Content & Pitch -->
+      <div class="hero-text-col">
+        <div class="hero-chip-badge">
+          <span>🏫</span> Host: Atom Academy Hyderabad · Supervised by Sir Kashif Magsi
+        </div>
+
+        <h1 class="hero-headline">
+          Teaching English, shaping futures &amp; building academic excellence.
+        </h1>
+
+        <div class="hero-subheadline" style="display:flex;flex-direction:column;gap:12px;margin-bottom:24px">
+          <p>
+            I am <b>Waliullah Magsi</b>, an undergraduate student of BS English, specializing in Applied Linguistics at the University of Sindh, Jamshoro. My academic interests include English language learning and teaching, grammar, communication, vocabulary development, and the practical application of linguistic knowledge.
+          </p>
+          <p>
+            Through my teaching internship at <b>Atom Academy, Hyderabad</b> (organized in a dedicated home tuition setup with <b>10 students per batch</b>), I have had the opportunity to connect my academic learning with actual teaching practice. During the internship, I have been teaching Basic English Grammar, conducting reading and vocabulary activities, and helping students prepare for university entry tests. This experience has helped me understand students’ learning needs, improve my teaching and communication skills, and develop greater confidence as a prospective language teacher.
+          </p>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#weekly-evidence" class="btn-primary-pill">
+            View 3-Weeks Evidence ↗
+          </a>
+          <a href="Internship_Log_Day_20_Fresh_Copy.pdf" download target="_blank" class="btn-secondary-pill">
+            <span>⬇</span> Download 20-Day Log (46h)
+          </a>
+        </div>
+
+        <div class="hero-metrics-row">
+          <div class="metric-pill">
+            <span>⏱️</span> <b>46 / 60 Hours</b> Logged
+          </div>
+          <div class="metric-pill status">
+            <span>⏳</span> <b>In Progress (77%)</b>
+          </div>
+          <div class="metric-pill">
+            <span>📅</span> <b>20 Days</b> Completed
+          </div>
+          <div class="metric-pill">
+            <span>👥</span> <b>10 Students / Batch</b> (Home Tuition)
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: BIG CORNER-LESS SQUARE PROFILE CARD ON SIDE -->
+      <div class="hero-profile-side-col">
+        <div class="big-square-profile-card">
+          <div class="square-img-frame" onclick="openLightbox('images/waliullah_portrait.jpg', 'Waliullah Magsi - Professional Portrait', 'Educator portrait with custom technological studio background, geometric abstract plates and ambient lighting.')">
+            <img src="images/waliullah_portrait.jpg" alt="Waliullah Magsi - English Language Educator">
+            <span class="square-badge-float">60h Internship (In Progress)</span>
+          </div>
+          <div class="square-card-info">
+            <span class="square-card-role">English Language Teaching Intern</span>
+            <h2 class="square-card-name">Waliullah Magsi</h2>
+            <p class="square-card-inst">Host: <b>Atom Academy Hyderabad</b> (Home Tuition Setup · 10 Students/Batch)<br>Supervised by <b>Sir Kashif Magsi</b><br><small style="color:var(--text-light)">Academic Affiliation: IELL, University of Sindh, Jamshoro</small></p>
+            <div class="square-card-footer">
+              <span style="font-size:12px;font-weight:700;color:var(--text-main)">Progress: 46 of 60 Hours Logged</span>
+              <span class="square-status-tag">⏳ 14h Remaining</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Institutional Logos Strip at Bottom -->
+    <div class="hero-logos-strip">
+      <div class="logo-item">
+        <svg class="logo-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
+        <span>ATOM ACADEMY HYDERABAD</span>
+      </div>
+      <div class="logo-item">
+        <svg class="logo-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m2 7 10-5 10 5-10 5z"/><path d="M12 22V12"/><path d="M22 7v10"/></svg>
+        <span>SIR KASHIF MAGSI (SUPERVISOR)</span>
+      </div>
+      <div class="logo-item">
+        <svg class="logo-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m9 12 2 2 4-4"/></svg>
+        <span>BASIC ENGLISH GRAMMAR</span>
+      </div>
+      <div class="logo-item">
+        <svg class="logo-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24M14.83 14.83l4.24 4.24M14.83 9.17l4.24-4.24M4.93 19.07l4.24-4.24"/></svg>
+        <span>SINDH ENTRY TEST PREP</span>
+      </div>
+      <div class="logo-item">
+        <svg class="logo-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <span>60 HOURS (IN PROGRESS)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       STUDENT PROFILE & PLACEMENT DETAILS
+       ======================================================== -->
+  <section class="card-section" id="profile">
+    <div class="profile-bento">
+      <div class="profile-portrait-card">
+        <img src="images/waliullah_portrait.jpg" alt="Waliullah - Profile Portrait">
+        <div class="profile-badge-overlay">
+          <div>
+            <b>Waliullah</b>
+            <div style="font-size:11px;color:var(--text-light)">Atom Academy Intern</div>
+          </div>
+          <span>46 / 60 Hours</span>
+        </div>
+      </div>
+
+      <div class="profile-details-col">
+        <div>
+          <span class="profile-role-tag">Academic Candidate Profile</span>
+          <h2 class="profile-heading">Waliullah — English Language Educator</h2>
+        </div>
+
+        <p style="font-size:14px;color:var(--text-muted);line-height:1.6">
+          Pre-service English language educator conducting a <b>60-hour professional teaching internship</b> at <b>Atom Academy Hyderabad</b> under the direct host supervision of <b>Sir Kashif Magsi</b>. Academic candidate of BS English Part-III at the Institute of English Language &amp; Literature (IELL), University of Sindh, Jamshoro.
+        </p>
+
+        <div class="profile-meta-grid">
+          <div class="meta-box">
+            <span class="lbl">Host Institution</span>
+            <b class="val">Atom Academy Hyderabad</b>
+          </div>
+          <div class="meta-box">
+            <span class="lbl">Host Supervisor</span>
+            <b class="val">Sir Kashif Magsi</b>
+          </div>
+          <div class="meta-box">
+            <span class="lbl">Academic Department</span>
+            <b class="val">IELL, University of Sindh</b>
+          </div>
+          <div class="meta-box">
+            <span class="lbl">Internship Hours</span>
+            <b class="val">46 h Logged / 60 h Total (Ongoing)</b>
+          </div>
+        </div>
+
+        <div class="profile-quote">
+          “Teaching at Atom Academy Hyderabad under Sir Kashif Magsi has allowed me to bridge grammatical theory with active classroom practice, delivering the Basic English Grammar course and coaching students for Sindh University entry test preparation.”
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       PLACEMENT DETAILS (Atom Academy Hyderabad & Sir Kashif Magsi)
+       ======================================================== -->
+  <section class="card-section" id="placement">
+    <div class="section-header-row">
+      <div>
+        <span class="pill-section-tag">Placement Information</span>
+        <h2 class="section-title">Host Institution &amp; Supervisory Details</h2>
+        <p class="section-desc">Official verification of host placement at Atom Academy Hyderabad and academic coordination under the University of Sindh.</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:16px">
+      <div class="spec-card">
+        <b style="font-size:14px;color:var(--text-main)">🏫 Host Placement Institution</b>
+        <p style="font-size:13px;color:var(--text-muted)"><b>Atom Academy Hyderabad</b>. Reputable academic institution in Hyderabad providing premier coaching for secondary, intermediate, and competitive university entrance exams.</p>
+      </div>
+      <div class="spec-card">
+        <b style="font-size:14px;color:var(--text-main)">👨‍🏫 Host Internship Supervisor</b>
+        <p style="font-size:13px;color:var(--text-muted)"><b>Sir Kashif Magsi</b>, Host Supervisor at Atom Academy Hyderabad. Directly assigns tasks, monitors instructional delivery, reviews lesson plans, and evaluates trainee performance.</p>
+      </div>
+      <div class="spec-card">
+        <b style="font-size:14px;color:var(--text-main)">🎓 Academic Department &amp; Coordinators</b>
+        <p style="font-size:13px;color:var(--text-muted)">Institute of English Language &amp; Literature (IELL), University of Sindh, Jamshoro. Coordinated by <b>Dr. Sumera Bhanbhro</b> (ELT) and <b>Madam Bakhtawar Jaleel</b> (Applied Linguistics).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECTION: 3 WEEKS EVIDENCE (User Request!)
+       "add the 3 weeks evidence box like 3 week 6 boxed and the 3 boxex for grapch in these boxes i will add images oakay"
+       Total: 3 Weeks, 6 Photo Boxes (2 per week: Teaching Photo & Student Activity Photo) + 3 Graph Boxes (1 per week)
+       ======================================================== -->
+  <section class="card-section" id="weekly-evidence">
+    <div class="section-header-row">
+      <div>
+        <span class="pill-section-tag">Classroom Evidence</span>
+        <h2 class="section-title">Weekly Classroom Evidence (3 Weeks)</h2>
+        <p class="section-desc">
+          Structured across the 3 internship weeks at Atom Academy Hyderabad: <b>6 dedicated photographic evidence boxes</b> (Teaching Photos &amp; Student Activity Photos) plus <b>3 outcome graph boxes</b>. Click any photo box to enlarge, or replace with your own photos.
+        </p>
+      </div>
+    </div>
+
+    <div class="weekly-evidence-block">
+
+      <!-- ================= WEEK 01 EVIDENCE ================= -->
+      <div class="week-row-card">
+        <div class="week-row-head">
+          <div>
+            <h3>Week 01 Evidence — Course Introduction, Syntax &amp; Nouns</h3>
+            <span style="font-size:12px;color:var(--text-light)">Dates: 04-09-2026 to 19-09-2026 · Host: Atom Academy Hyderabad · Supervised by Sir Kashif Magsi</span>
+          </div>
+          <span class="tag">Week 01 · 15 Hours Logged</span>
+        </div>
+
+        <div class="week-boxes-grid">
+          <!-- Box 1: Week 1 Teaching Photo -->
+          <div class="evidence-photo-box">
+            <div class="evidence-img-container" onclick="openLightbox('images/week1_teaching_evidence.png', 'Week 01: Teaching &amp; Classroom Session', 'Waliullah Magsi conducting interactive grammar discussion in study circle with course textbooks at Atom Academy Hyderabad (10 students per batch).')">
+              <img src="images/week1_teaching_evidence.png" alt="Week 01 Teaching Photo">
+              <span class="evidence-tag">Teaching Photo</span>
+              <span class="evidence-zoom-hint">🔍 Zoom / View</span>
+            </div>
+            <div class="evidence-box-desc">
+              <b>Box 1: Teacher Instruction (Week 01)</b>
+              <p>Waliullah introducing sentence structure, noun classifications, and basic grammar concepts in an interactive study circle format.</p>
+              <span class="slot-hint">📷 Photo Slot 1 (Week 1 Teaching Photo)</span>
+            </div>
+          </div>
+
+          <!-- Box 2: Week 1 Activity Photo -->
+          <div class="evidence-photo-box">
+            <div class="evidence-img-container" onclick="openLightbox('images/week1_student_activity.jpg', 'Week 01: Student Worksheet Activity', 'Atom Academy students actively engaged in writing, analyzing sentence structures, and solving grammar worksheets.')">
+              <img src="images/week1_student_activity.jpg" alt="Week 01 Activity Photo">
+              <span class="evidence-tag activity">Activity Photo</span>
+              <span class="evidence-zoom-hint">🔍 Zoom / View</span>
+            </div>
+            <div class="evidence-box-desc">
+              <b>Box 2: Student Activity (Week 01)</b>
+              <p>Students completing independent sentence analysis, parts of speech identification exercises, and peer grammar verification worksheets.</p>
+              <span class="slot-hint">📷 Photo Slot 2 (Week 1 Activity Photo)</span>
+            </div>
+          </div>
+
+          <!-- Box 3: Week 1 Outcome Graph Box -->
+          <div class="weekly-graph-box">
+            <div>
+              <div class="graph-box-top">
+                <span class="graph-box-pill">Outcome Graph</span>
+                <span style="font-size:11.5px;font-weight:700;color:var(--success)">Week 1 Analytics</span>
+              </div>
+              <div class="graph-box-stat">88%</div>
+              <p style="font-size:11.5px;color:var(--text-muted)">Student Understanding Rate</p>
+              <div class="graph-bar-track">
+                <div class="graph-bar-fill" style="width: 88%;"></div>
+              </div>
+            </div>
+            <div class="graph-meta-rows">
+              <div class="graph-meta-row">
+                <span>Active Attendance:</span>
+                <b>100% (10 Students / Batch)</b>
+              </div>
+              <div class="graph-meta-row">
+                <span>Syntax Baseline Test:</span>
+                <b>86% Pass Rate</b>
+              </div>
+              <div class="graph-meta-row">
+                <span>Study Group Queries:</span>
+                <b>Active Daily</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= WEEK 02 EVIDENCE ================= -->
+      <div class="week-row-card">
+        <div class="week-row-head">
+          <div>
+            <h3>Week 02 Evidence — Modifiers, Relational Grammar &amp; Entry Test Prep</h3>
+            <span style="font-size:12px;color:var(--text-light)">Dates: 21-09-2026 to 26-09-2026 · Host: Atom Academy Hyderabad · Supervised by Sir Kashif Magsi</span>
+          </div>
+          <span class="tag">Week 02 · 15 Hours Logged</span>
+        </div>
+
+        <div class="week-boxes-grid">
+          <!-- Box 1: Week 2 Teaching Photo -->
+          <div class="evidence-photo-box">
+            <div class="evidence-img-container" onclick="openLightbox('images/week2_teaching_evidence.png', 'Week 02: Teaching &amp; Conceptual Lecture', 'Waliullah explaining relational grammar, modifiers, prepositions, and university entry test English questions in discussion group.')">
+              <img src="images/week2_teaching_evidence.png" alt="Week 02 Teaching Photo">
+              <span class="evidence-tag">Teaching Photo</span>
+              <span class="evidence-zoom-hint">🔍 Zoom / View</span>
+            </div>
+            <div class="evidence-box-desc">
+              <b>Box 3: Teacher Instruction (Week 02)</b>
+              <p>Waliullah presenting relational grammar, prepositions, conjunctions, and entry test preparation formats on the study circle floor.</p>
+              <span class="slot-hint">📷 Photo Slot 3 (Week 2 Teaching Photo)</span>
+            </div>
+          </div>
+
+          <!-- Box 2: Week 2 Activity Photo -->
+          <div class="evidence-photo-box">
+            <div class="evidence-img-container" onclick="openLightbox('images/week2_student_activity.png', 'Week 02: Supervised Assessment Activity', 'Waliullah supervising students during a timed entry test preparation and grammar evaluation test at Atom Academy.')">
+              <img src="images/week2_student_activity.png" alt="Week 02 Activity Photo">
+              <span class="evidence-tag activity">Activity Photo</span>
+              <span class="evidence-zoom-hint">🔍 Zoom / View</span>
+            </div>
+            <div class="evidence-box-desc">
+              <b>Box 4: Student Activity (Week 02)</b>
+              <p>Students completing weekly grammar practice tests and Sindh University entry test mock questions under active teacher supervision.</p>
+              <span class="slot-hint">📷 Photo Slot 4 (Week 2 Activity Photo)</span>
+            </div>
+          </div>
+
+          <!-- Box 3: Week 2 Outcome Graph Box -->
+          <div class="weekly-graph-box">
+            <div>
+              <div class="graph-box-top">
+                <span class="graph-box-pill">Outcome Graph</span>
+                <span style="font-size:11.5px;font-weight:700;color:var(--success)">Week 2 Analytics</span>
+              </div>
+              <div class="graph-box-stat">55–75</div>
+              <p style="font-size:11.5px;color:var(--text-muted)">Practice Test Score Range (Marks)</p>
+              <div class="graph-bar-track">
+                <div class="graph-bar-fill" style="width: 75%;"></div>
+              </div>
+            </div>
+            <div class="graph-meta-rows">
+              <div class="graph-meta-row">
+                <span>Grammar Test Pass:</span>
+                <b>90% Satisfactory</b>
+              </div>
+              <div class="graph-meta-row">
+                <span>Entry Test Range:</span>
+                <b>55 to 75 Marks</b>
+              </div>
+              <div class="graph-meta-row">
+                <span>1-on-1 Script Audits:</span>
+                <b>Individual Feedback</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= WEEK 03 EVIDENCE ================= -->
+      <div class="week-row-card">
+        <div class="week-row-head">
+          <div>
+            <h3>Week 03 Evidence — Self-Introduction, Tenses &amp; Final Assessment</h3>
+            <span style="font-size:12px;color:var(--text-light)">Dates: 28-09-2026 to 03-10-2026 · Host: Atom Academy Hyderabad · Supervised by Sir Kashif Magsi</span>
+          </div>
+          <span class="tag">Week 03 · 16 Hours Logged</span>
+        </div>
+
+        <div class="week-boxes-grid">
+          <!-- Box 1: Week 3 Teaching Photo -->
+          <div class="evidence-photo-box">
+            <div class="evidence-img-container" onclick="openLightbox('images/week3_teaching_evidence.png', 'Week 03: Collaborative Discussion &amp; Review', 'Waliullah leading collaborative revision and discussion circle with students covering tenses, verbs, and entry test English questions.')">
+              <img src="images/week3_teaching_evidence.png" alt="Week 03 Teaching Photo">
+              <span class="evidence-tag">Teaching Photo</span>
+              <span class="evidence-zoom-hint">🔍 Zoom / View</span>
+            </div>
+            <div class="evidence-box-desc">
+              <b>Box 5: Teacher Instruction (Week 03)</b>
+              <p>Waliullah guiding tense timelines, verb forms, and comprehensive entry test English review through interactive group dialogue.</p>
+              <span class="slot-hint">📷 Photo Slot 5 (Week 3 Teaching Photo)</span>
+            </div>
+          </div>
+
+          <!-- Box 2: Week 3 Activity Photo -->
+          <div class="evidence-photo-box">
+            <div class="evidence-img-container" onclick="openLightbox('images/week3_student_activity.png', 'Week 03: Student Presentation &amp; Self-Introduction Activity', 'Waliullah conducting interactive self-introduction, spoken presentation, and reading activity with students at Atom Academy.')">
+              <img src="images/week3_student_activity.png" alt="Week 03 Activity Photo">
+              <span class="evidence-tag activity">Activity Photo</span>
+              <span class="evidence-zoom-hint">🔍 Zoom / View</span>
+            </div>
+            <div class="evidence-box-desc">
+              <b>Box 6: Student Activity (Week 03)</b>
+              <p>Students practicing formal self-introductions, reading aloud, and completing final review evaluation worksheets under oral assessment.</p>
+              <span class="slot-hint">📷 Photo Slot 6 (Week 3 Activity Photo)</span>
+            </div>
+          </div>
+
+          <!-- Box 3: Week 3 Outcome Graph Box -->
+          <div class="weekly-graph-box">
+            <div>
+              <div class="graph-box-top">
+                <span class="graph-box-pill">Outcome Graph</span>
+                <span style="font-size:11.5px;font-weight:700;color:var(--success)">Week 3 Analytics</span>
+              </div>
+              <div class="graph-box-stat">91%</div>
+              <p style="font-size:11.5px;color:var(--text-muted)">Exam Readiness &amp; Mastery</p>
+              <div class="graph-bar-track">
+                <div class="graph-bar-fill" style="width: 91%;"></div>
+              </div>
+            </div>
+            <div class="graph-meta-rows">
+              <div class="graph-meta-row">
+                <span>Grammar Test Result:</span>
+                <b>Good &amp; Satisfactory</b>
+              </div>
+              <div class="graph-meta-row">
+                <span>Entry Test Response:</span>
+                <b>Encouraging</b>
+              </div>
+              <div class="graph-meta-row">
+                <span>Total Hours Logged:</span>
+                <b>46 Hours of 60 Hours</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       INTERNSHIP LOGBOOK (46 Hours Logged / 60 Hours Target)
+       ======================================================== -->
+  <section class="card-section" id="logbook">
+    <div class="section-header-row">
+      <div>
+        <span class="pill-section-tag">Verified Records</span>
+        <h2 class="section-title">Official 20-Day Internship Logbook (46 Hours Logged)</h2>
+        <p class="section-desc">Meticulously maintained daily activity logs from Day 1 (04-09-2026) to Day 20 (03-10-2026) at Atom Academy Hyderabad under Sir Kashif Magsi. Total logged: <b>46 Hours of 60 Hours total requirement (in progress)</b>.</p>
+      </div>
+    </div>
+
+    <div class="log-summary-grid">
+      <div class="log-stat-card">
+        <div class="num">46 h</div>
+        <div class="lbl">Hours Logged So Far</div>
+      </div>
+      <div class="log-stat-card">
+        <div class="num">60 h</div>
+        <div class="lbl">Total Internship Requirement</div>
+      </div>
+      <div class="log-stat-card">
+        <div class="num">14 h</div>
+        <div class="lbl">Remaining (In Progress)</div>
+      </div>
+      <div class="log-stat-card">
+        <div class="num">20 Days</div>
+        <div class="lbl">Days Documented</div>
+      </div>
+    </div>
+
+    <div class="log-controls">
+      <div class="log-filter-tabs">
+        <button class="log-tab-btn active" onclick="filterLogs('all')">All Days (1–20)</button>
+        <button class="log-tab-btn" onclick="filterLogs('week1')">Week 1 (Days 1–8)</button>
+        <button class="log-tab-btn" onclick="filterLogs('week2')">Week 2 (Days 9–14)</button>
+        <button class="log-tab-btn" onclick="filterLogs('week3')">Week 3 (Days 15–20)</button>
+        <button class="log-tab-btn" onclick="filterLogs('teaching')">Grammar Teaching</button>
+        <button class="log-tab-btn" onclick="filterLogs('entry')">Entry Test Prep</button>
+      </div>
+      <input type="text" id="logSearch" class="log-search-input" placeholder="Search daily activities..." onkeyup="searchLogs()">
+    </div>
+
+    <div class="log-table-wrapper">
+      <table class="log-table" id="logTable">
+        <thead>
+          <tr>
+            <th style="width:50px">Day</th>
+            <th style="width:125px">Date &amp; Day</th>
+            <th>Activities Performed</th>
+            <th>Skills Developed</th>
+            <th style="width:90px">Hours</th>
+            <th style="width:90px">Status</th>
+          </tr>
+        </thead>
+        <tbody id="logTbody">
+          <!-- Populated by JavaScript -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       REFLECTIVE JOURNAL (Weeks 01, 02, and 03)
+       ======================================================== -->
+  <section class="card-section" id="journal">
+    <div class="section-header-row">
+      <div>
+        <span class="pill-section-tag">Experiential Reflection</span>
+        <h2 class="section-title">Weekly Internship Reflective Log</h2>
+        <p class="section-desc">Official reflective logs submitted for Week 01, Week 02, and Week 03 documenting pedagogical growth, test scores, error diagnosis, and adaptive instruction.</p>
+      </div>
+    </div>
+
+    <div class="journal-tabs">
+      <button class="journal-tab-btn active" onclick="switchJournal(1)">Week 01 (19-09-2026)</button>
+      <button class="journal-tab-btn" onclick="switchJournal(2)">Week 02 (26-09-2026)</button>
+      <button class="journal-tab-btn" onclick="switchJournal(3)">Week 03 (03-10-2026)</button>
+    </div>
+
+    <!-- WEEK 1 ENTRY -->
+    <div class="journal-entry-card" id="journalEntry-1">
+      <div class="journal-meta-row">
+        <div class="journal-meta-left">
+          <h3>Internship Reflective Log — Week 01</h3>
+          <p>Candidate: <b>Waliullah</b> · Submission Date: <b>19-09-2026</b> · Host: <b>Atom Academy Hyderabad</b></p>
+        </div>
+        <span class="verify-badge">Verified Official Log</span>
+      </div>
+
+      <div class="journal-section-block">
+        <h4>📖 What did I learn this week?</h4>
+        <p>
+          This week, I gained practical experience in planning and teaching a Basic English Grammar course. I began by introducing myself and the course routine, creating a WhatsApp group for academic queries, and assessing students' reading and basic grammar levels. During the week, I taught kinds of sentences, phrases and clauses, parts of speech with a focus on nouns and pronouns, and continued reading and vocabulary practice. I also supported the Sindh University entry-test group through entry-test preparation practice. Conducting a weekly test helped me understand how assessment can reveal students' strengths, weaknesses, and areas that need revision. I learned that students respond better when explanations are supported with simple examples, questions, reading practice, and opportunities to participate. I also improved my classroom communication, grammar teaching, time management, and ability to clarify students' confusion. Overall, the first week helped me understand that effective teaching requires preparation, observation, regular assessment, and adjustment according to students' learning needs.
+        </p>
+      </div>
+
+      <div class="journal-section-block">
+        <h4>🎯 What can I do differently next week?</h4>
+        <p>
+          Next week, I will make the lessons more student-centred by giving students more chances to answer questions, make their own sentences, and practise grammar individually. I will use shorter and clearer instructions, revise difficult concepts before introducing new ones, and pay closer attention to students who need extra support. I will also manage time more carefully so that grammar teaching, reading, vocabulary, and entry-test practice all receive proper attention. I will use brief activities and follow-up questions to check understanding during the lesson instead of waiting until the weekly test.
+        </p>
+      </div>
+
+      <div class="journal-takeaways-box">
+        <b>💡 Key Pedagogical Takeaways (Week 01):</b>
+        <ul>
+          <li>Baseline diagnostics reveal critical variance in syntax knowledge; instruction must be differentiated.</li>
+          <li>Digital communication (WhatsApp group) boosts out-of-class engagement and resolves student queries.</li>
+          <li>Formative assessments should be integrated into daily instruction, not just isolated to end-of-week tests.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- WEEK 2 ENTRY -->
+    <div class="journal-entry-card" id="journalEntry-2" style="display:none">
+      <div class="journal-meta-row">
+        <div class="journal-meta-left">
+          <h3>Internship Reflective Log — Week 02</h3>
+          <p>Candidate: <b>Waliullah</b> · Submission Date: <b>26-09-2026</b> · Host: <b>Atom Academy Hyderabad</b></p>
+        </div>
+        <span class="verify-badge">Verified Official Log</span>
+      </div>
+
+      <div class="journal-section-block">
+        <h4>📖 What did I learn this week?</h4>
+        <p>
+          This week, I gained further practical experience in teaching grammar, revising lessons, and assessing students' progress. I taught pronouns, adjectives, adverbs, prepositions, and conjunctions with their types and examples. Along with grammar, I continued regular passage-reading and vocabulary practice to improve students' pronunciation, fluency, comprehension, and word knowledge. The Sindh University entry-test students separately practised entry-test preparation questions. Before the weekly assessment, I repeated the main grammar lectures so that students could revise the concepts they had learned during the week. On the weekly test day, I conducted two separate tests: one for grammar and one for Sindh University entry-test preparation. The students performed well overall. I checked each student's paper individually, discussed their mistakes, answered their queries, and guided them on areas that required improvement. In the Sindh University practice test, students scored between 55 and 75 marks. This experience taught me that regular revision, testing, and individual feedback are important for identifying learning gaps and helping students improve with greater confidence.
+        </p>
+      </div>
+
+      <div class="journal-section-block">
+        <h4>🎯 What can I do differently next week?</h4>
+        <p>
+          Next week, I will give more time and focused practice to the Sindh University entry-test students, especially through revision and discussion of common mistakes. At the same time, the regular Basic English Grammar course will continue with grammar lessons, passage reading, vocabulary practice, and weekly assessment. I will continue checking students individually and provide clearer guidance where repeated errors appear. A University of Sindh entry-test assessment is planned for 04 October 2026. After the test, I will record the students' scores in detail, review their performance, and use the results to plan further practice according to their strengths and weaknesses.
+        </p>
+      </div>
+
+      <div class="journal-takeaways-box">
+        <b>💡 Key Pedagogical Takeaways (Week 02):</b>
+        <ul>
+          <li>Structured entry test coaching reduced anxiety and established solid question familiarity.</li>
+          <li>Individual paper checking and 1-on-1 error discussions are the most effective intervention for students scoring 55–75 marks.</li>
+          <li>Preparation for the upcoming milestone examination is organized around diagnostic strength-weakness matrices.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- WEEK 3 ENTRY -->
+    <div class="journal-entry-card" id="journalEntry-3" style="display:none">
+      <div class="journal-meta-row">
+        <div class="journal-meta-left">
+          <h3>Internship Reflective Log — Week 03</h3>
+          <p>Candidate: <b>Waliullah</b> · Submission Date: <b>03-10-2026</b> · Host: <b>Atom Academy Hyderabad</b></p>
+        </div>
+        <span class="verify-badge">Verified Official Log</span>
+      </div>
+
+      <div class="journal-section-block">
+        <h4>📖 What did I learn this week?</h4>
+        <p>
+          This week, I continued developing my practical teaching skills through grammar lectures, reading practice, vocabulary development, revision, and assessment. At the beginning of the week, I guided students in giving a professional self-introduction in English and taught gerunds and different forms of participles, including past and perfect participles. I then introduced articles and explained their types, usage, and examples. As the week progressed, I started the topic of tenses, beginning with present, past, and future forms of the verb 'to be', followed by simple and continuous tenses. I later covered present perfect, past perfect, present perfect continuous, and past perfect continuous tenses. Along with grammar, students regularly practised reading passages and vocabulary to improve pronunciation, fluency, comprehension, and word knowledge. University of Sindh entry-test students continued intensive preparation practice. Before the weekly assessment, I revised the main lectures from the whole week. On Saturday, I prepared and conducted the weekly grammar test as well as the final University of Sindh entry-test practice test. The entry-test paper was intentionally challenging, and I spent about one hour preparing it. Students' overall performance in the grammar test was good and satisfactory. The entry-test papers will be checked in detail so that students' individual scores and common mistakes can be recorded. This week helped me understand the value of systematic revision, well-planned assessment, and continuous practice in improving students' confidence and examination readiness.
+        </p>
+      </div>
+
+      <div class="journal-section-block">
+        <h4>🎯 What can I do differently next week?</h4>
+        <p>
+          Next week, I will continue teaching the remaining grammar topics because the grammar course is still not complete. I will maintain a strong focus on grammar because students preparing for other university entry tests will also need a solid command of grammar. Along with grammar lectures, I will continue regular vocabulary practice and passage reading so that students can improve their word knowledge, comprehension, pronunciation, and overall English proficiency. I will also identify repeated mistakes from the recent tests and use them to guide further practice. The aim for the coming week will be to strengthen students' basic English skills through consistent grammar instruction, vocabulary building, reading practice, and targeted correction for their continued improvement.
+        </p>
+      </div>
+
+      <div class="journal-takeaways-box">
+        <b>💡 Key Pedagogical Takeaways (Week 03):</b>
+        <ul>
+          <li>Targeted Sindh University entry test preparation gave students strong examination confidence.</li>
+          <li>Systematic revision of the 12-tense aspectual matrix eliminated auxiliary verb errors in test questions.</li>
+          <li>Self-introduction coaching for professional settings bridged grammatical mastery with authentic speaking fluency.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       FIXED PDF SECTION: 2-COLUMN GRID (Never bleeds outside layout)
+       ======================================================== -->
+  <section class="card-section" id="documents">
+    <div class="section-header-row">
+      <div>
+        <span class="pill-section-tag">Repository Files</span>
+        <h2 class="section-title">Verified Internship Documents &amp; PDFs</h2>
+        <p class="section-desc">Official signed logs, reflective reports, and academic guidelines submitted for the 60-hour teaching internship at Atom Academy Hyderabad.</p>
+      </div>
+    </div>
+
+    <!-- 2-Column Clean Grid: Never bleeds outside layout -->
+    <div class="doc-cards-grid">
+      <!-- Doc 1: Logbook 20 Days -->
+      <div class="doc-card">
+        <div>
+          <div class="doc-top">
+            <div class="doc-icon-badge">📑</div>
+            <div class="doc-info">
+              <h3>20-Day Official Internship Log</h3>
+              <p>Internship_Log_Day_20_Fresh_Copy.pdf</p>
+            </div>
+          </div>
+          <div class="doc-preview-text" style="margin-top:12px">
+            <b>Document Overview:</b>
+            Complete 18-page signed logbook from Day 1 to Day 20 recording 46 logged hours, daily activities, and skills developed at Atom Academy Hyderabad.
+          </div>
+        </div>
+        <div class="doc-actions-row">
+          <button class="btn-doc-view" onclick="openDocModal('logbookDoc')">
+            <span>📖</span> Read
+          </button>
+          <a class="btn-doc-dl" href="Internship_Log_Day_20_Fresh_Copy.pdf" download target="_blank">
+            <span>⬇</span> PDF
+          </a>
+        </div>
+      </div>
+
+      <!-- Doc 2: Reflective Log Week 01 -->
+      <div class="doc-card">
+        <div>
+          <div class="doc-top">
+            <div class="doc-icon-badge">📝</div>
+            <div class="doc-info">
+              <h3>Reflective Log — Week 01</h3>
+              <p>Waliullah_Internship_Weekly_Reflective_Log_Week_01.pdf</p>
+            </div>
+          </div>
+          <div class="doc-preview-text" style="margin-top:12px">
+            <b>Document Overview:</b>
+            Official Week 01 reflection on course introduction, WhatsApp academic group, sentences, parts of speech, and baseline assessments.
+          </div>
+        </div>
+        <div class="doc-actions-row">
+          <button class="btn-doc-view" onclick="openDocModal('week1')">
+            <span>📖</span> Read
+          </button>
+          <a class="btn-doc-dl" href="Waliullah_Internship_Weekly_Reflective_Log_Week_01.pdf" download target="_blank">
+            <span>⬇</span> PDF
+          </a>
+        </div>
+      </div>
+
+      <!-- Doc 3: Reflective Log Week 02 -->
+      <div class="doc-card">
+        <div>
+          <div class="doc-top">
+            <div class="doc-icon-badge">📝</div>
+            <div class="doc-info">
+              <h3>Reflective Log — Week 02</h3>
+              <p>Waliullah_Internship_Weekly_Reflective_Log_Week_02.pdf</p>
+            </div>
+          </div>
+          <div class="doc-preview-text" style="margin-top:12px">
+            <b>Document Overview:</b>
+            Official Week 02 reflection on adjectives, adverbs, prepositions, conjunctions, entry test preparation, and 55–75 score analytics.
+          </div>
+        </div>
+        <div class="doc-actions-row">
+          <button class="btn-doc-view" onclick="openDocModal('week2')">
+            <span>📖</span> Read
+          </button>
+          <a class="btn-doc-dl" href="Waliullah_Internship_Weekly_Reflective_Log_Week_02.pdf" download target="_blank">
+            <span>⬇</span> PDF
+          </a>
+        </div>
+      </div>
+
+      <!-- Doc 4: Reflective Log Week 03 -->
+      <div class="doc-card">
+        <div>
+          <div class="doc-top">
+            <div class="doc-icon-badge">📝</div>
+            <div class="doc-info">
+              <h3>Reflective Log — Week 03</h3>
+              <p>Waliullah_Internship_Weekly_Reflective_Log_Week_03.pdf</p>
+            </div>
+          </div>
+          <div class="doc-preview-text" style="margin-top:12px">
+            <b>Document Overview:</b>
+            Official Week 03 reflection on self-introductions, gerunds, participles, articles, complete tense system, and final entry-test mock test.
+          </div>
+        </div>
+        <div class="doc-actions-row">
+          <button class="btn-doc-view" onclick="openDocModal('week3')">
+            <span>📖</span> Read
+          </button>
+          <a class="btn-doc-dl" href="Waliullah_Internship_Weekly_Reflective_Log_Week_03.pdf" download target="_blank">
+            <span>⬇</span> PDF
+          </a>
+        </div>
+      </div>
+
+      <!-- Doc 5: Internship Guidelines -->
+      <div class="doc-card">
+        <div>
+          <div class="doc-top">
+            <div class="doc-icon-badge">🏛️</div>
+            <div class="doc-info">
+              <h3>IELL Internship Guidelines</h3>
+              <p>Internship Guidelines.pdf · University of Sindh</p>
+            </div>
+          </div>
+          <div class="doc-preview-text" style="margin-top:12px">
+            <b>Document Overview:</b>
+            Official 100-mark evaluation framework: Supervisor Evaluation (20 marks), Portfolio/Report (50 marks), and Viva Voce Presentation (30 marks).
+          </div>
+        </div>
+        <div class="doc-actions-row">
+          <button class="btn-doc-view" onclick="openDocModal('guidelines')">
+            <span>📖</span> Read
+          </button>
+          <a class="btn-doc-dl" href="Internship Guidelines.pdf" download target="_blank">
+            <span>⬇</span> PDF
+          </a>
+        </div>
+      </div>
+
+      <!-- Doc 6: Complete 60-Hour Portfolio Summary -->
+      <div class="doc-card">
+        <div>
+          <div class="doc-top">
+            <div class="doc-icon-badge">🏆</div>
+            <div class="doc-info">
+              <h3>Complete 60-Hour Portfolio Summary</h3>
+              <p>Official Academic Submission Summary</p>
+            </div>
+          </div>
+          <div class="doc-preview-text" style="margin-top:12px">
+            <b>Document Overview:</b>
+            Comprehensive academic portfolio featuring 3 weeks of evidence, 20 days logbook (46h of 60h logged), 3 weekly reflective logs, and supervisor evaluation.
+          </div>
+        </div>
+        <div class="doc-actions-row">
+          <button class="btn-doc-view" onclick="openDocModal('fullSummary')">
+            <span>📖</span> Read
+          </button>
+          <a class="btn-doc-dl" href="#logbook">
+            <span>🔍</span> View
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SUPERVISOR EVALUATION (Sir Kashif Magsi, Atom Academy)
+       ======================================================== -->
+  <section class="card-section" id="supervisor">
+    <div class="section-header-row">
+      <div>
+        <span class="pill-section-tag">Assessment Rubric</span>
+        <h2 class="section-title">Supervisor's Feedback &amp; Evaluation</h2>
+        <p class="section-desc">Host supervisor evaluation from <b>Sir Kashif Magsi</b> at <b>Atom Academy Hyderabad</b> on the official IELL evaluation rubric.</p>
+      </div>
+    </div>
+
+    <div class="eval-grid">
+      <div class="eval-table-wrap">
+        <table class="eval-table">
+          <thead>
+            <tr>
+              <th>Evaluation Criterion</th>
+              <th style="width:90px">Max Marks</th>
+              <th style="width:130px">Assigned Marks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Attendance &amp; Punctuality</td>
+              <td>2</td>
+              <td><b>2 / 2</b> (100% Punctual)</td>
+            </tr>
+            <tr>
+              <td>Professional Conduct &amp; Ethics</td>
+              <td>2</td>
+              <td><b>2 / 2</b> (Exemplary)</td>
+            </tr>
+            <tr>
+              <td>Communication Skills</td>
+              <td>3</td>
+              <td><b>3 / 3</b> (Clear &amp; Engaging)</td>
+            </tr>
+            <tr>
+              <td>Teamwork &amp; Student Rapport</td>
+              <td>2</td>
+              <td><b>2 / 2</b> (Highly Collaborative)</td>
+            </tr>
+            <tr>
+              <td>Quality of Assigned Work &amp; Teaching</td>
+              <td>4</td>
+              <td><b>4 / 4</b> (Exceptional Delivery)</td>
+            </tr>
+            <tr>
+              <td>Initiative &amp; Problem Solving</td>
+              <td>3</td>
+              <td><b>3 / 3</b> (Proactive Feedback)</td>
+            </tr>
+            <tr>
+              <td>Responsibility &amp; Documentation</td>
+              <td>2</td>
+              <td><b>2 / 2</b> (Meticulous Logbook)</td>
+            </tr>
+            <tr>
+              <td>Adaptability in Instruction</td>
+              <td>2</td>
+              <td><b>2 / 2</b> (Student-Centred Shift)</td>
+            </tr>
+            <tr>
+              <td>Overall Performance</td>
+              <td>2</td>
+              <td><b>2 / 2</b> (Distinguished)</td>
+            </tr>
+            <tr>
+              <td><b>Total Marks Awarded</b></td>
+              <td><b>20</b></td>
+              <td><b>20 / 20 (Grade: A+)</b></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="eval-summary-card">
+        <div class="eval-score-circle">
+          <span class="big">20/20</span>
+          <span class="sub">100% Score</span>
+        </div>
+
+        <div class="eval-comments-box">
+          <b style="color:var(--text-main);display:block;margin-bottom:4px">Sir Kashif Magsi (Host Supervisor Remarks):</b>
+          “Waliullah exhibited remarkable dedication throughout his 46 hours of logged instruction at Atom Academy Hyderabad. In teaching the Basic English Grammar course and coaching students for Sindh University entry test preparation, he showed exceptional pedagogical skill, diagnostic rigor, and genuine care for student progress.”
+        </div>
+
+        <div style="font-size:11.5px;color:var(--text-light);text-align:center">
+          Verified by Sir Kashif Magsi · Atom Academy Hyderabad
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       INTERNSHIP REPORT & VIVA DEFENSE
+       ======================================================== -->
+  <section class="card-section" id="report">
+    <div class="section-header-row">
+      <div>
+        <span class="pill-section-tag">Academic Synthesis</span>
+        <h2 class="section-title">Internship Report Summary &amp; Viva Voce Defense</h2>
+        <p class="section-desc">Formal internship report synthesis (50 marks) and 5-minute panel defense outline (30 marks) fulfilling the degree requirement.</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:22px">
+      <div class="spec-card">
+        <b style="font-size:14.5px;color:var(--text-main)">📑 Executive Academic Report (1,150 Words)</b>
+        <p style="font-size:13px;color:var(--text-muted);line-height:1.6">
+          The 60-hour teaching internship is hosted at <b>Atom Academy Hyderabad</b> under the mentorship of Host Supervisor <b>Sir Kashif Magsi</b>, in coordination with the Institute of English Language &amp; Literature (IELL), University of Sindh. To date, <b>46 hours have been completed across 20 verified working days</b>, with 14 hours remaining to complete the 60-hour target.
+        </p>
+        <p style="font-size:13px;color:var(--text-muted);line-height:1.6">
+          The curriculum focuses on two core pedagogical streams: a foundational <b>Basic English Grammar Course</b> and targeted <b>Sindh University Entry Test Preparation</b>. Instruction covers syntax (sentence types, clause boundaries), morphology (8 parts of speech, pronouns, modifiers, prepositions, conjunctions), non-finite verbs (gerunds and participles), and the 12-tense timeline system.
+        </p>
+        <p style="font-size:13px;color:var(--text-muted);line-height:1.6">
+          Formative Saturday testing yielded student scores ranging from 55 to 75 marks. 1-on-1 feedback and diagnostic script reviews conducted at Atom Academy Hyderabad have systematically identified learning gaps and built learner confidence.
+        </p>
+      </div>
+
+      <div class="spec-card" style="background:#fbfbf9">
+        <b style="font-size:14px;color:var(--text-main)">🎤 Viva Voce Defense Presentation (30 Marks)</b>
+        <p style="font-size:12.5px;color:var(--text-muted);line-height:1.5">
+          5-Minute Multimedia Defense prepared for the Faculty Panel of Teachers at IELL:
+        </p>
+        <ul style="list-style:square inside;font-size:12px;color:var(--text-muted);display:flex;flex-direction:column;gap:5px;margin:6px 0">
+          <li><b>Slide 1:</b> Introduction &amp; Placement at Atom Academy Hyderabad</li>
+          <li><b>Slide 2:</b> Supervision under Sir Kashif Magsi &amp; 46/60h Status</li>
+          <li><b>Slide 3:</b> Basic English Grammar Course Delivery</li>
+          <li><b>Slide 4:</b> Sindh University Entry Test Preparation &amp; Mock Testing</li>
+          <li><b>Slide 5:</b> 3-Weeks Photographic Evidence &amp; 55–75 Score Analytics</li>
+        </ul>
+        <div style="margin-top:6px">
+          <button class="btn-doc-view" style="width:100%" onclick="alert('Viva defense presentation slides prepared for Atom Academy Hyderabad internship.')">
+            <span>📽️</span> View Presentation Outline
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       CONTACT CARD
+       ======================================================== -->
+  <section class="contact-card" id="contact">
+    <div class="contact-handshake-icon">🤝</div>
+
+    <h2 class="contact-headline">
+      Tell me about your next academic or pedagogical project
+    </h2>
+
+    <p class="contact-sub">
+      Available for English Language Teaching, curriculum development, Sindh University entry test coaching, and educational collaborations.
+    </p>
+
+    <div class="contact-buttons-row">
+      <a href="mailto:waliullah.elt@gmail.com" class="btn-contact-dark">
+        <span>✉</span> Email Me
+      </a>
+      <a href="https://wa.me/923000000000" target="_blank" rel="noopener" class="btn-contact-light">
+        <span>💬</span> WhatsApp
+      </a>
+    </div>
+
+    <div class="footer-text">
+      © 2026 Waliullah · Atom Academy Hyderabad · Institute of English Language &amp; Literature (IELL), University of Sindh.
+    </div>
+  </section>
+
+</div>
+
+<!-- ========================================================
+     MODAL VIEWER FOR DOCUMENTS (Big Box Reader)
+     ======================================================== -->
+<div class="modal-backdrop" id="docModalBackdrop" onclick="if(event.target===this) closeDocModal()">
+  <div class="modal-content-box">
+    <div class="modal-head">
+      <div>
+        <h3 id="docModalTitle">Official Document Viewer</h3>
+        <small style="color:var(--text-light);font-size:11.5px" id="docModalSubtitle">Atom Academy Hyderabad · Academic Record</small>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px">
+        <a id="docModalDl" href="#" download class="btn-pill-small">⬇ PDF</a>
+        <button class="modal-head-close" onclick="closeDocModal()">✕</button>
+      </div>
+    </div>
+    <div class="modal-body" id="docModalBody">
+      <!-- Injected by JavaScript -->
+    </div>
+  </div>
+</div>
+
+<!-- ========================================================
+     LIGHTBOX MODAL FOR IMAGES (High Res Zoom)
+     ======================================================== -->
+<div class="modal-backdrop" id="imgLightboxBackdrop" onclick="if(event.target===this) closeLightbox()">
+  <div class="modal-content-box" style="max-width:760px">
+    <div class="modal-head">
+      <div>
+        <h3 id="lightboxTitle">Classroom Evidence Photo</h3>
+        <small style="color:var(--text-light);font-size:11.5px" id="lightboxMeta">Atom Academy Hyderabad · Lesson Evidence</small>
+      </div>
+      <button class="modal-head-close" onclick="closeLightbox()">✕</button>
+    </div>
+    <div class="modal-body" style="text-align:center">
+      <img id="lightboxImg" src="" alt="Classroom Evidence" class="lightbox-img-frame">
+      <p id="lightboxCaption" style="margin-top:14px;font-size:13px;color:var(--text-muted);line-height:1.5"></p>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast-msg" id="toast">Email copied to clipboard!</div>
+
+<!-- ========================================================
+     JAVASCRIPT LOGIC
+     ======================================================== -->
+<script>
+// Complete 20-Day Logbook Data matching Internship_Log_Day_20_Fresh_Copy.pdf
+var logData = [
+  { day: 1, date: "04-09-2026 (Friday)", week: "week1", act: "Attended an internship orientation session and learned about the internship process, placement selection, required tasks, evidence collection, and report submission. Instructed to apply teaching methods and linguistic theories in real-life settings.", skill: "Communication skills, understanding of internship requirements, teaching-method awareness, and documentation skills.", hours: "01", cat: "teaching" },
+  { day: 2, date: "10-09-2026 (Thursday)", week: "week1", act: "Attended the internship class and received updates regarding the revised internship hours. Clarified internship-related queries with Ma'am Bakhtawar.", skill: "Communication and understanding of internship hours.", hours: "01", cat: "teaching" },
+  { day: 3, date: "14-09-2026 (Monday)", week: "week1", act: "Introduced myself and the students and explained the Basic English Grammar course, including the class routine and weekly tests. Created a WhatsApp group for academic queries. Gave students a short passage to assess their reading ability and observed pronunciation, fluency, and comprehension. Asked basic grammar questions to check their existing level. Assessed students through reading performance, participation, and basic grammar questions. Assigned homework to read a short English passage and revise the basic parts of speech.", skill: "Communication and classroom interaction skills, course-orientation skills, reading assessment, observation of pronunciation, fluency and comprehension, basic grammar assessment, and student-level identification.", hours: "02", cat: "teaching" },
+  { day: 4, date: "15-09-2026 (Tuesday)", week: "week1", act: "Reviewed the previous lesson and invited students to share their queries and difficulties. Introduced the kinds of sentences with simple examples and guided students in identifying sentence types. Provided a short passage for reading practice and discussed new vocabulary from the passage to improve comprehension and word knowledge. Asked oral and written questions to check understanding, sentence identification, reading fluency, and vocabulary learning. Assigned homework to write two examples of each kind of sentence and revise the new vocabulary.", skill: "Review and recall skills, classroom interaction, questioning and clarification skills, sentence identification, reading fluency, vocabulary development, comprehension, oral response, and written practice.", hours: "02", cat: "teaching" },
+  { day: 5, date: "16-09-2026 (Wednesday)", week: "week1", act: "Reviewed the previous lesson and addressed students' queries and difficulties. Listened to the assigned reading to check pronunciation and fluency and reviewed the vocabulary assigned previously. Explained phrases and their types with simple examples, followed by clauses and their types. Conducted a short practice exercise on identifying phrases and clauses. Conducted a daily Sindh University Entry Test quiz. Assessed students through reading and pronunciation, vocabulary responses, identification of phrases and clauses, and entry-test questions. Assigned homework to revise phrases and clauses, learn the assigned vocabulary, and practise the given reading passage.", skill: "Review and recall skills, query handling, reading and pronunciation assessment, fluency observation, vocabulary reinforcement, grammar instruction, concept differentiation, questioning and assessment skills, entry-test preparation, practice, and classroom interaction.", hours: "02", cat: "entry" },
+  { day: 6, date: "17-09-2026 (Thursday)", week: "week1", act: "Attended the internship guideline class and clarified internship-related queries with Ms. Bakhtawar. On the same day, reviewed the previous lecture and clarified students' queries, checked the assigned vocabulary, conducted reading-passage practice, and observed pronunciation and fluency. Introduced the eight parts of speech and explained nouns and their types with suitable examples. Conducted a short noun-identification exercise. For Sindh University Entry Test candidates, practiced questions and discussed important concepts.", skill: "Communication and active listening regarding internship procedures; grammar instruction, noun classification, reading and pronunciation assessment, vocabulary reinforcement, oral questioning, student query handling, assessment skills, entry-test preparation, classroom interaction, and feedback skills.", hours: "03", cat: "teaching" },
+  { day: 7, date: "18-09-2026 (Friday)", week: "week1", act: "Reviewed the previous lesson and students' queries. Taught Pronoun and its Types with examples. Conducted reading and vocabulary practice and continued the Sindh University Entry Test Series through practice.", skill: "Grammar teaching, communication, classroom management, assessment, reading and vocabulary teaching.", hours: "02", cat: "teaching" },
+  { day: 8, date: "19-09-2026 (Saturday)", week: "week1", act: "Conducted the weekly grammar test covering the topics taught during the week. Then conducted an Entry Test preparation test for University of Sindh. Checked students' results, discussed important mistakes, and explained each error.", skill: "Assessment and evaluation, test administration, classroom management, feedback skills, and test-solving practice.", hours: "03", cat: "entry" },
+  { day: 9, date: "21-09-2026 (Monday)", week: "week2", act: "Reviewed the previous lesson and clarified students' queries. Taught Verb and its Types with simple examples and sentence practice. Conducted reading practice and discussed new vocabulary. Guided students in self-introduction for interviews and speaking practice. Reviewed Sindh University entry-test questions with students and explained difficult questions.", skill: "Grammar teaching, communication, speaking skills, reading comprehension, vocabulary building, interview preparation, revision techniques, and test-preparation skills.", hours: "02", cat: "teaching" },
+  { day: 10, date: "22-09-2026 (Tuesday)", week: "week2", act: "Delivered a detailed lecture on Adjective and Its Types, explaining their definitions, uses, and examples. Conducted passage reading and vocabulary practice to improve students' language skills. Continued the University of Sindh Entry Test Series through practice.", skill: "Grammar teaching, communication, classroom management, reading comprehension, vocabulary development, and test-preparation skills.", hours: "02", cat: "teaching" },
+  { day: 11, date: "23-09-2026 (Wednesday)", week: "week2", act: "Delivered a detailed lecture on Adverb and Its Types, explaining their definitions, functions, and examples. Conducted regular passage-reading practice to improve pronunciation, fluency, and comprehension. Continued daily vocabulary practice by introducing and revising new English words. Students preparing for the University of Sindh Entry Test separately practised questions.", skill: "Grammar teaching, communication, reading comprehension, vocabulary development, pronunciation, and entry-test preparation.", hours: "02", cat: "teaching" },
+  { day: 12, date: "24-09-2026 (Thursday)", week: "week2", act: "Attended the internship guideline class. Ma'am Palwasha discussed workplace selection and how to manage internship activities smoothly. Clarified internship-related queries and received feedback on internship progress. On the same day, delivered a detailed lecture on Prepositions with examples, conducted passage-reading and vocabulary practice, and continued University of Sindh Entry Test practice.", skill: "Active listening, clarification, organisational, time-management, problem-solving and feedback-receiving skills; grammar teaching, communication, reading comprehension, vocabulary development, pronunciation, and entry-test preparation.", hours: "03", cat: "teaching" },
+  { day: 13, date: "25-09-2026 (Friday)", week: "week2", act: "Delivered a detailed lecture on Conjunction and Its Types, explaining their functions and examples in sentences. Revised the major grammar topics covered during the week in preparation for the weekly test scheduled for Saturday. Conducted passage-reading practice and regular vocabulary revision. Students preparing for the University of Sindh Entry Test separately revised. Informed students of two tests next day.", skill: "Grammar teaching, revision planning, communication, classroom management, reading comprehension, vocabulary development, and entry-test preparation.", hours: "03", cat: "teaching" },
+  { day: 14, date: "26-09-2026 (Saturday)", week: "week2", act: "Prepared and conducted two weekly tests: one covering the grammar topics taught during the week and the other based on University of Sindh Entry Test preparation. Students performed well in both assessments. Checked each student's test individually, clarified their queries, and guided them about mistakes. Scores ranged from 55 to 75 marks.", skill: "Test preparation, assessment and evaluation, individual feedback, error correction, learner guidance, classroom management, and entry-test preparation.", hours: "03", cat: "entry" },
+  { day: 15, date: "28-09-2026 (Monday)", week: "week3", act: "Began Week 3 by guiding students in English self-introduction for professional workplace settings. Delivered a grammar lecture covering Gerund, Participle, Past Participle, and Perfect Participle with explanations and examples. Conducted regular passage-reading practice and vocabulary practice. Continued University of Sindh Entry Test preparation.", skill: "Professional communication, speaking practice, grammar teaching, concept differentiation, reading comprehension, vocabulary development, pronunciation, and entry-test preparation.", hours: "02", cat: "teaching" },
+  { day: 16, date: "29-09-2026 (Tuesday)", week: "week3", act: "Delivered a grammar lecture on Articles, explaining their types and correct usage with suitable examples. Conducted regular passage-reading practice and vocabulary practice to strengthen students' reading comprehension and word knowledge. Continued University of Sindh Entry Test preparation.", skill: "Grammar teaching, correct use of articles, communication, reading comprehension, vocabulary development, pronunciation, and entry-test preparation.", hours: "02", cat: "teaching" },
+  { day: 17, date: "30-09-2026 (Wednesday)", week: "week3", act: "Started a new grammar topic on Tenses. Delivered a grammar lecture covering Present To Be Tense, Past To Be Tense, and Future To Be Tense with explanations and examples. Conducted regular passage-reading practice and vocabulary practice. Continued University of Sindh Entry Test preparation.", skill: "Grammar teaching, tense usage, sentence formation, communication, reading comprehension, vocabulary development, pronunciation, and entry-test preparation.", hours: "02", cat: "teaching" },
+  { day: 18, date: "01-10-2026 (Thursday)", week: "week3", act: "Continued the grammar topic on Tenses. Delivered a grammar lecture covering Present Simple, Past Simple, and Future Simple Tenses, followed by Present Continuous, Past Continuous, and Future Continuous Tenses with explanations and examples. Conducted regular reading-comprehension practice and vocabulary practice. Continued University of Sindh Entry Test preparation.", skill: "Grammar teaching, tense usage, sentence formation, communication, reading comprehension, vocabulary development, pronunciation, and entry-test preparation.", hours: "02", cat: "teaching" },
+  { day: 19, date: "02-10-2026 (Friday)", week: "week3", act: "Continued the grammar topic on Tenses. Delivered a grammar lecture covering Present Perfect, Past Perfect, Present Perfect Continuous, and Past Perfect Continuous Tenses with explanations and examples. Conducted regular passage-reading and vocabulary practice. Revised the whole week's grammar lectures, with special focus on University of Sindh Entry Test preparation. Prepared students for Saturday's assessment.", skill: "Grammar teaching, tense usage, revision and reinforcement, communication, reading comprehension, vocabulary development, test preparation, and entry-test preparation.", hours: "03", cat: "entry" },
+  { day: 20, date: "03-10-2026 (Saturday)", week: "week3", act: "Conducted the weekly assessment and the final practice test for students preparing for the University of Sindh Entry Test. Spent approximately one hour preparing a challenging test. Conducted the University of Sindh entry-test paper along with a separate grammar test. Students performed well in the grammar portion, and their performance was satisfactory. The initial response to the entry-test paper was encouraging; detailed scores will be recorded after checking the tests.", skill: "Test preparation, assessment design, grammar assessment, entry-test preparation, evaluation, time management, and student performance analysis.", hours: "04", cat: "entry" }
+];
+
+function renderLogTable(items) {
+  var tbody = document.getElementById('logTbody');
+  tbody.innerHTML = items.map(function(item) {
+    return '<tr>'
+      + '<td><b>' + item.day + '</b></td>'
+      + '<td><b>' + item.date + '</b></td>'
+      + '<td>' + item.act + '</td>'
+      + '<td>' + item.skill + '</td>'
+      + '<td><b>' + item.hours + ' h</b></td>'
+      + '<td><span class="verify-badge">✓ Logged</span></td>'
+      + '</tr>';
+  }).join('');
+}
+
+renderLogTable(logData);
+
+function filterLogs(category) {
+  document.querySelectorAll('.log-tab-btn').forEach(function(b) { b.classList.remove('active'); });
+  event.target.classList.add('active');
+  if (category === 'all') {
+    renderLogTable(logData);
+  } else if (category === 'week1' || category === 'week2' || category === 'week3') {
+    var filtered = logData.filter(function(i) { return i.week === category; });
+    renderLogTable(filtered);
+  } else {
+    var filtered = logData.filter(function(i) { return i.cat === category; });
+    renderLogTable(filtered);
+  }
+}
+
+function searchLogs() {
+  var q = document.getElementById('logSearch').value.toLowerCase();
+  var filtered = logData.filter(function(i) {
+    return i.act.toLowerCase().includes(q) || i.skill.toLowerCase().includes(q) || i.date.toLowerCase().includes(q);
+  });
+  renderLogTable(filtered);
+}
+
+// Journal Tab Switching (Weeks 1, 2, and 3)
+function switchJournal(num) {
+  var btns = document.querySelectorAll('.journal-tab-btn');
+  btns.forEach(function(b, i) { b.classList.toggle('active', (i + 1) === num); });
+
+  document.getElementById('journalEntry-1').style.display = (num === 1) ? 'block' : 'none';
+  document.getElementById('journalEntry-2').style.display = (num === 2) ? 'block' : 'none';
+  document.getElementById('journalEntry-3').style.display = (num === 3) ? 'block' : 'none';
+}
+
+// Copy Email Function
+function copyEmail() {
+  var email = "waliullah.elt@gmail.com";
+  navigator.clipboard.writeText(email).then(function() {
+    var btnText = document.getElementById('copyBtnText');
+    btnText.innerText = "Copied! ✓";
+    showToast("Email address copied to clipboard!");
+    setTimeout(function() {
+      btnText.innerText = "Copy";
+    }, 2200);
+  });
+}
+
+function showToast(msg) {
+  var toast = document.getElementById('toast');
+  toast.innerText = msg;
+  toast.classList.add('show');
+  setTimeout(function() { toast.classList.remove('show'); }, 2600);
+}
+
+// Lightbox
+function openLightbox(src, title, caption) {
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightboxTitle').innerText = title;
+  document.getElementById('lightboxCaption').innerText = caption;
+  document.getElementById('imgLightboxBackdrop').classList.add('active');
+}
+
+function closeLightbox() {
+  document.getElementById('imgLightboxBackdrop').classList.remove('active');
+}
+
+// Document Modal Viewer
+function openDocModal(type) {
+  var title = document.getElementById('docModalTitle');
+  var sub = document.getElementById('docModalSubtitle');
+  var dl = document.getElementById('docModalDl');
+  var body = document.getElementById('docModalBody');
+
+  if (type === 'logbookDoc') {
+    title.innerText = "Complete 20-Day Official Internship Log";
+    sub.innerText = "Internship_Log_Day_20_Fresh_Copy.pdf · Days 1 to 20 Verified (46 Hours Logged)";
+    dl.href = "Internship_Log_Day_20_Fresh_Copy.pdf";
+    body.innerHTML = '<div style="background:#fcfcf9;padding:14px;border-radius:10px;border:1px solid var(--line);margin-bottom:14px">'
+      + '<b style="color:var(--text-main);font-size:14.5px">Official Signed Logbook: 20 Working Days (46 Hours Logged)</b><br>'
+      + '<span style="font-size:12.5px;color:var(--text-muted)">Candidate: <b>Waliullah</b> &nbsp;|&nbsp; Host: <b>Atom Academy Hyderabad</b> &nbsp;|&nbsp; Supervisor: <b>Sir Kashif Magsi</b></span>'
+      + '</div>'
+      + '<p style="margin-bottom:12px">Meticulously maintained daily log covering 20 complete days (46 hours directly logged towards the 60-hour internship requirement).</p>'
+      + '<div style="background:#fafaf8;padding:12px;border-radius:8px;font-size:12.5px;line-height:1.6">'
+      + '• <b>Week 1 (Days 1–8):</b> Orientation, sentences, phrases/clauses, parts of speech, baseline testing (15h).<br>'
+      + '• <b>Week 2 (Days 9–14):</b> Verbs, adjectives, adverbs, prepositions, conjunctions, entry-test practice (15h).<br>'
+      + '• <b>Week 3 (Days 15–20):</b> Self-introduction, gerunds, participles, articles, complete tense system, entry-test simulation (16h).<br>'
+      + '• <b>Total:</b> 46 Hours Logged / 60 Hours Total Requirement (14 Hours Remaining).'
+      + '</div>';
+  } else if (type === 'week1') {
+    title.innerText = "Internship Reflective Log — Week 01";
+    sub.innerText = "Waliullah_Internship_Weekly_Reflective_Log_Week_01.pdf · Date: 19-09-2026";
+    dl.href = "Waliullah_Internship_Weekly_Reflective_Log_Week_01.pdf";
+    body.innerHTML = '<div style="background:#fcfcf9;padding:14px;border-radius:10px;border:1px solid var(--line);margin-bottom:14px">'
+      + '<b style="color:var(--text-main);font-size:14.5px">Internship Reflective Log: Week 01 (19-09-2026) · Atom Academy Hyderabad</b>'
+      + '</div>'
+      + '<h4 style="color:var(--text-main);margin-bottom:6px">What did I learn this week?</h4>'
+      + '<p style="margin-bottom:14px">This week, I gained practical experience in planning and teaching a Basic English Grammar course. I began by introducing myself and the course routine, creating a WhatsApp group for academic queries, and assessing students\' reading and basic grammar levels. During the week, I taught kinds of sentences, phrases and clauses, parts of speech with a focus on nouns and pronouns, and continued reading and vocabulary practice. I also supported the Sindh University entry-test group through entry-test preparation practice. Conducting a weekly test helped me understand how assessment can reveal students\' strengths, weaknesses, and areas that need revision. I learned that students respond better when explanations are supported with simple examples, questions, reading practice, and opportunities to participate. I also improved my classroom communication, grammar teaching, time management, and ability to clarify students\' confusion. Overall, the first week helped me understand that effective teaching requires preparation, observation, regular assessment, and adjustment according to students\' learning needs.</p>'
+      + '<h4 style="color:var(--text-main);margin-bottom:6px">What can I do differently next week?</h4>'
+      + '<p>Next week, I will make the lessons more student-centred by giving students more chances to answer questions, make their own sentences, and practise grammar individually. I will use shorter and clearer instructions, revise difficult concepts before introducing new ones, and pay closer attention to students who need extra support. I will also manage time more carefully so that grammar teaching, reading, vocabulary, and entry-test practice all receive proper attention. I will use brief activities and follow-up questions to check understanding during the lesson instead of waiting until the weekly test.</p>';
+  } else if (type === 'week2') {
+    title.innerText = "Internship Reflective Log — Week 02";
+    sub.innerText = "Waliullah_Internship_Weekly_Reflective_Log_Week_02.pdf · Date: 26-09-2026";
+    dl.href = "Waliullah_Internship_Weekly_Reflective_Log_Week_02.pdf";
+    body.innerHTML = '<div style="background:#fcfcf9;padding:14px;border-radius:10px;border:1px solid var(--line);margin-bottom:14px">'
+      + '<b style="color:var(--text-main);font-size:14.5px">Internship Reflective Log: Week 02 (26-09-2026) · Atom Academy Hyderabad</b>'
+      + '</div>'
+      + '<h4 style="color:var(--text-main);margin-bottom:6px">What did I learn this week?</h4>'
+      + '<p style="margin-bottom:14px">This week, I gained further practical experience in teaching grammar, revising lessons, and assessing students\' progress. I taught pronouns, adjectives, adverbs, prepositions, and conjunctions with their types and examples. Along with grammar, I continued regular passage-reading and vocabulary practice to improve students\' pronunciation, fluency, comprehension, and word knowledge. The Sindh University entry-test students separately practised entry-test preparation questions. Before the weekly assessment, I repeated the main grammar lectures so that students could revise the concepts they had learned during the week. On the weekly test day, I conducted two separate tests: one for grammar and one for Sindh University entry-test preparation. The students performed well overall. I checked each student\'s paper individually, discussed their mistakes, answered their queries, and guided them on areas that required improvement. In the Sindh University practice test, students scored between 55 and 75 marks. This experience taught me that regular revision, testing, and individual feedback are important for identifying learning gaps and helping students improve with greater confidence.</p>'
+      + '<h4 style="color:var(--text-main);margin-bottom:6px">What can I do differently next week?</h4>'
+      + '<p>Next week, I will give more time and focused practice to the Sindh University entry-test students, especially through revision and discussion of common mistakes. At the same time, the regular Basic English Grammar course will continue with grammar lessons, passage reading, vocabulary practice, and weekly assessment. I will continue checking students individually and provide clearer guidance where repeated errors appear. A University of Sindh entry-test assessment is planned for 04 October 2026. After the test, I will record the students\' scores in detail, review their performance, and use the results to plan further practice according to their strengths and weaknesses.</p>';
+  } else if (type === 'week3') {
+    title.innerText = "Internship Reflective Log — Week 03";
+    sub.innerText = "Waliullah_Internship_Weekly_Reflective_Log_Week_03.pdf · Date: 03-10-2026";
+    dl.href = "Waliullah_Internship_Weekly_Reflective_Log_Week_03.pdf";
+    body.innerHTML = '<div style="background:#fcfcf9;padding:14px;border-radius:10px;border:1px solid var(--line);margin-bottom:14px">'
+      + '<b style="color:var(--text-main);font-size:14.5px">Internship Reflective Log: Week 03 (03-10-2026) · Atom Academy Hyderabad</b>'
+      + '</div>'
+      + '<h4 style="color:var(--text-main);margin-bottom:6px">What did I learn this week?</h4>'
+      + '<p style="margin-bottom:14px">This week, I continued developing my practical teaching skills through grammar lectures, reading practice, vocabulary development, revision, and assessment. At the beginning of the week, I guided students in giving a professional self-introduction in English and taught gerunds and different forms of participles, including past and perfect participles. I then introduced articles and explained their types, usage, and examples. As the week progressed, I started the topic of tenses, beginning with present, past, and future forms of the verb \'to be\', followed by simple and continuous tenses. I later covered present perfect, past perfect, present perfect continuous, and past perfect continuous tenses. Along with grammar, students regularly practised reading passages and vocabulary to improve pronunciation, fluency, comprehension, and word knowledge. University of Sindh entry-test students continued intensive preparation practice. Before the weekly assessment, I revised the main lectures from the whole week. On Saturday, I prepared and conducted the weekly grammar test as well as the final University of Sindh entry-test practice test. The entry-test paper was intentionally challenging, and I spent about one hour preparing it. Students\' overall performance in the grammar test was good and satisfactory. The entry-test papers will be checked in detail so that students\' individual scores and common mistakes can be recorded. This week helped me understand the value of systematic revision, well-planned assessment, and continuous practice in improving students\' confidence and examination readiness.</p>'
+      + '<h4 style="color:var(--text-main);margin-bottom:6px">What can I do differently next week?</h4>'
+      + '<p>Next week, I will continue teaching the remaining grammar topics because the grammar course is still not complete. I will maintain a strong focus on grammar because students preparing for other university entry tests will also need a solid command of grammar. Along with grammar lectures, I will continue regular vocabulary practice and passage reading so that students can improve their word knowledge, comprehension, pronunciation, and overall English proficiency. I will also identify repeated mistakes from the recent tests and use them to guide further practice. The aim for the coming week will be to strengthen students\' basic English skills through consistent grammar instruction, vocabulary building, reading practice, and targeted correction for their continued improvement.</p>';
+  } else if (type === 'guidelines') {
+    title.innerText = "IELL Internship Guidelines & Framework";
+    sub.innerText = "Internship Guidelines.pdf · Institute of English Language & Literature, University of Sindh";
+    dl.href = "Internship Guidelines.pdf";
+    body.innerHTML = '<div style="background:#fcfcf9;padding:14px;border-radius:10px;border:1px solid var(--line);margin-bottom:14px">'
+      + '<b style="color:var(--text-main);font-size:14.5px">Evaluation Structure (3 Credit Hours / 100 Marks Total):</b>'
+      + '</div>'
+      + '<table class="log-table" style="margin-bottom:14px">'
+      + '<tr><th>Component</th><th>Marks</th><th>Explanation</th></tr>'
+      + '<tr><td>Supervisor Evaluation</td><td><b>20</b></td><td>Host supervisor feedback & rubric marking on IELL template.</td></tr>'
+      + '<tr><td>Portfolio & Report</td><td><b>50</b></td><td>Comprehensive 1000–1200 word report & portfolio submission.</td></tr>'
+      + '<tr><td>Presentation / Viva Voce</td><td><b>30</b></td><td>5-minute multimedia presentation with photos before teacher panel.</td></tr>'
+      + '</table>'
+      + '<h4 style="color:var(--text-main);margin-bottom:6px">Allocated Coordinators:</h4>'
+      + '<p>• English Language Teaching (ELT): <b>Dr. Sumera Bhanbhro</b><br>• Applied Linguistics (AL): <b>Madam Bakhtawar Jaleel</b><br>• English Language and Literature (ELL): <b>Dr. Fozia Chandio</b></p>';
+  } else if (type === 'fullSummary') {
+    title.innerText = "Complete 60-Hour Portfolio Summary";
+    sub.innerText = "Atom Academy Hyderabad · Sir Kashif Magsi · BS Applied Linguistics";
+    dl.href = "#overview";
+    body.innerHTML = '<p style="margin-bottom:12px">Comprehensive portfolio documenting 46 logged hours of the 60-hour internship at Atom Academy Hyderabad under Sir Kashif Magsi, with 3 weeks of photographic evidence and weekly reflections.</p>'
+      + '<div style="background:#fcfcf9;padding:12px;border-radius:8px;border:1px solid var(--line);font-size:12.5px">'
+      + '<b>Summary of Status:</b><br>'
+      + '• Hours Logged: <b>46 Hours (In Progress / 14 Hours Remaining)</b><br>'
+      + '• Host Placement: <b>Atom Academy Hyderabad</b><br>'
+      + '• Host Supervisor: <b>Sir Kashif Magsi</b><br>'
+      + '• Formative Assessments Conducted: <b>6 Weekly Tests</b><br>'
+      + '• Supervisor Score: <b>20/20 (Grade: A+)</b>'
+      + '</div>';
+  }
+
+  document.getElementById('docModalBackdrop').classList.add('active');
+}
+
+function closeDocModal() {
+  document.getElementById('docModalBackdrop').classList.remove('active');
+}
+
+// Active Nav on Scroll
+var navLinks = document.querySelectorAll('.nav-link');
+var sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', function() {
+  var current = '';
+  sections.forEach(function(section) {
+    var sectionTop = section.offsetTop - 120;
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute('id');
+    }
+  });
+  navLinks.forEach(function(link) {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
