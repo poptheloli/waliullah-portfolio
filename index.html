@@ -1532,6 +1532,28 @@ button {
   box-shadow: var(--shadow-hover);
 }
 
+.doc-card-thumb {
+  width: 100%;
+  height: 140px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #f7f7f5;
+  cursor: pointer;
+  margin: 10px 0 6px;
+}
+.doc-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transition: transform 0.25s ease;
+}
+.doc-card-thumb:hover img {
+  transform: scale(1.02);
+}
+
 .doc-top { display: flex; gap: 14px; }
 
 .doc-icon-badge {
@@ -1617,8 +1639,9 @@ button {
    ======================================================== */
 .eval-grid {
   display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: 22px;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
 }
 
 @media (max-width: 880px) {
@@ -2033,23 +2056,29 @@ button {
         </div>
 
         <div class="hero-actions">
-          <a href="#weekly-evidence" class="btn-primary-pill">
-            View 3-Weeks Evidence ↗
+          <button onclick="openDocModal('certificate')" class="btn-primary-pill">
+            <span>📜</span> View Certificate ↗
+          </button>
+          <a href="Waliullah_Magsi_Internship_Certificate.pdf" download="Waliullah_Magsi_Internship_Certificate.pdf" target="_blank" class="btn-secondary-pill">
+            <span>⬇</span> Certificate (PDF)
           </a>
-          <a href="Internship_Log_Day_20_Fresh_Copy.pdf" download target="_blank" class="btn-secondary-pill">
-            <span>⬇</span> Download 20-Day Log (46h)
+          <a href="Internship_Log_Complete_60_Hours.pdf" download="Internship_Log_Complete_60_Hours.pdf" target="_blank" class="btn-secondary-pill">
+            <span>⬇</span> 60-Hour Logbook (PDF)
           </a>
         </div>
 
         <div class="hero-metrics-row">
           <div class="metric-pill">
-            <span>⏱️</span> <b>46 / 60 Hours</b> Logged
+            <span>⏱️</span> <b>60 / 60 Hours</b> Logged
           </div>
-          <div class="metric-pill status">
-            <span>⏳</span> <b>In Progress (77%)</b>
+          <div class="metric-pill status" style="background:rgba(5,150,105,0.12);color:#065f46">
+            <span>✓</span> <b>Completed &amp; Certified (100%)</b>
           </div>
           <div class="metric-pill">
-            <span>📅</span> <b>20 Days</b> Completed
+            <span>⭐</span> <b>Evaluation: 20/20</b> (Perfect Score)
+          </div>
+          <div class="metric-pill">
+            <span>📅</span> <b>26 Days</b> Completed
           </div>
           <div class="metric-pill">
             <span>👥</span> <b>10 Students / Batch</b> (Home Tuition)
@@ -2060,17 +2089,17 @@ button {
       <!-- Right Column: BIG CORNER-LESS SQUARE PROFILE CARD ON SIDE -->
       <div class="hero-profile-side-col">
         <div class="big-square-profile-card">
-          <div class="square-img-frame" onclick="openLightbox('images/waliullah_portrait.jpg', 'Waliullah Magsi - Professional Portrait', 'Educator portrait with custom technological studio background, geometric abstract plates and ambient lighting.')">
+          <div class="square-img-frame" onclick="openDocModal('certificate')">
             <img src="images/waliullah_portrait.jpg" alt="Waliullah Magsi - English Language Educator">
-            <span class="square-badge-float">60h Internship (In Progress)</span>
+            <span class="square-badge-float" style="background:#065f46;color:#ffffff">60h Internship (Completed · 20/20 Marks)</span>
           </div>
           <div class="square-card-info">
             <span class="square-card-role">English Language Teaching Intern</span>
             <h2 class="square-card-name">Waliullah Magsi</h2>
             <p class="square-card-inst">Host: <b>Atom Academy Hyderabad</b> (Home Tuition Setup · 10 Students/Batch)<br>Supervised by <b>Sir Kashif Magsi</b><br><small style="color:var(--text-light)">Academic Affiliation: IELL, University of Sindh, Jamshoro</small></p>
             <div class="square-card-footer">
-              <span style="font-size:12px;font-weight:700;color:var(--text-main)">Progress: 46 of 60 Hours Logged</span>
-              <span class="square-status-tag">⏳ 14h Remaining</span>
+              <span style="font-size:12px;font-weight:700;color:var(--text-main)">Progress: 60 of 60 Hours Logged (100%)</span>
+              <span class="square-status-tag" style="background:#065f46;color:#ffffff">✓ Certified &amp; Completed</span>
             </div>
           </div>
         </div>
@@ -2097,7 +2126,7 @@ button {
       </div>
       <div class="logo-item">
         <svg class="logo-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        <span>60 HOURS (IN PROGRESS)</span>
+        <span>60 HOURS COMPLETED (20/20 MARKS)</span>
       </div>
     </div>
   </section>
@@ -2114,7 +2143,7 @@ button {
             <b>Waliullah</b>
             <div style="font-size:11px;color:var(--text-light)">Atom Academy Intern</div>
           </div>
-          <span>46 / 60 Hours</span>
+          <span>60 / 60 Hours</span>
         </div>
       </div>
 
@@ -2125,7 +2154,7 @@ button {
         </div>
 
         <p style="font-size:14px;color:var(--text-muted);line-height:1.6">
-          Pre-service English language educator conducting a <b>60-hour professional teaching internship</b> at <b>Atom Academy Hyderabad</b> under the direct host supervision of <b>Sir Kashif Magsi</b>. Academic candidate of BS English Part-III at the Institute of English Language &amp; Literature (IELL), University of Sindh, Jamshoro.
+          Pre-service English language educator who has completed a <b>60-hour professional teaching internship</b> at <b>Atom Academy Hyderabad</b> under the direct host supervision of <b>Sir Kashif Magsi</b>. Academic candidate of BS Applied Linguistics at the Institute of English Language &amp; Literature (IELL), University of Sindh, Jamshoro.
         </p>
 
         <div class="profile-meta-grid">
@@ -2143,7 +2172,7 @@ button {
           </div>
           <div class="meta-box">
             <span class="lbl">Internship Hours</span>
-            <b class="val">46 h Logged / 60 h Total (Ongoing)</b>
+            <b class="val">60 h Completed / 60 h Total (100% Complete)</b>
           </div>
         </div>
 
@@ -2403,7 +2432,7 @@ button {
               </div>
               <div class="graph-meta-row">
                 <span>Total Hours Logged:</span>
-                <b>46 Hours of 60 Hours</b>
+                <b>60 Hours of 60 Hours (100%)</b>
               </div>
             </div>
           </div>
@@ -2414,42 +2443,43 @@ button {
   </section>
 
   <!-- ========================================================
-       INTERNSHIP LOGBOOK (46 Hours Logged / 60 Hours Target)
+       INTERNSHIP LOGBOOK (60 Hours Logged — 100% Complete)
        ======================================================== -->
   <section class="card-section" id="logbook">
     <div class="section-header-row">
       <div>
         <span class="pill-section-tag">Verified Records</span>
-        <h2 class="section-title">Official 20-Day Internship Logbook (46 Hours Logged)</h2>
-        <p class="section-desc">Meticulously maintained daily activity logs from Day 1 (04-09-2026) to Day 20 (03-10-2026) at Atom Academy Hyderabad under Sir Kashif Magsi. Total logged: <b>46 Hours of 60 Hours total requirement (in progress)</b>.</p>
+        <h2 class="section-title">Official 26-Day Internship Logbook (60 Hours Complete)</h2>
+        <p class="section-desc">Meticulously maintained daily activity logs from Day 1 (04-09-2026) to Day 26 (10-10-2026) at Atom Academy Hyderabad under Sir Kashif Magsi. Total logged: <b>60 Hours of 60 Hours total requirement (100% Completed &amp; Officially Signed)</b>.</p>
       </div>
     </div>
 
     <div class="log-summary-grid">
       <div class="log-stat-card">
-        <div class="num">46 h</div>
-        <div class="lbl">Hours Logged So Far</div>
-      </div>
-      <div class="log-stat-card">
         <div class="num">60 h</div>
-        <div class="lbl">Total Internship Requirement</div>
+        <div class="lbl">Hours Logged (100% Target Met)</div>
       </div>
       <div class="log-stat-card">
-        <div class="num">14 h</div>
-        <div class="lbl">Remaining (In Progress)</div>
+        <div class="num">26 Days</div>
+        <div class="lbl">Working Days Completed</div>
       </div>
       <div class="log-stat-card">
-        <div class="num">20 Days</div>
-        <div class="lbl">Days Documented</div>
+        <div class="num">20 / 20</div>
+        <div class="lbl">Supervisor Evaluation Score</div>
+      </div>
+      <div class="log-stat-card">
+        <div class="num">100%</div>
+        <div class="lbl">Attendance &amp; Punctuality</div>
       </div>
     </div>
 
     <div class="log-controls">
       <div class="log-filter-tabs">
-        <button class="log-tab-btn active" onclick="filterLogs('all')">All Days (1–20)</button>
+        <button class="log-tab-btn active" onclick="filterLogs('all')">All Days (1–26)</button>
         <button class="log-tab-btn" onclick="filterLogs('week1')">Week 1 (Days 1–8)</button>
         <button class="log-tab-btn" onclick="filterLogs('week2')">Week 2 (Days 9–14)</button>
         <button class="log-tab-btn" onclick="filterLogs('week3')">Week 3 (Days 15–20)</button>
+        <button class="log-tab-btn" onclick="filterLogs('week4')">Week 4 (Days 21–26)</button>
         <button class="log-tab-btn" onclick="filterLogs('teaching')">Grammar Teaching</button>
         <button class="log-tab-btn" onclick="filterLogs('entry')">Entry Test Prep</button>
       </div>
@@ -2610,32 +2640,100 @@ button {
 
     <!-- 2-Column Clean Grid: Never bleeds outside layout -->
     <div class="doc-cards-grid">
-      <!-- Doc 1: Logbook 20 Days -->
+      <!-- Doc 1: Appreciation Certificate (Top Feature) -->
+      <div class="doc-card" style="border:1.5px solid #065f46">
+        <div>
+          <div class="doc-top">
+            <div class="doc-icon-badge" style="background:rgba(5,150,105,0.12);color:#065f46">📜</div>
+            <div class="doc-info">
+              <span class="verify-badge" style="background:#065f46;color:#ffffff;display:inline-block;margin-bottom:4px">Official Attestation</span>
+              <h3 style="margin:0 0 4px">Internship Certificate of Appreciation</h3>
+              <p>Atom Academy Hyderabad · Issued to Mr. Waliullah Magsi</p>
+            </div>
+          </div>
+          <div class="doc-card-thumb" onclick="openDocModal('certificate')">
+            <img src="images/internship_certificate.jpg" alt="Internship Certificate of Appreciation - Waliullah Magsi">
+          </div>
+          <div class="doc-preview-text">
+            <b>Official Institutional Attestation:</b>
+            Awarded to <b>Mr. Waliullah Magsi</b> (BS Applied Linguistics, University of Sindh) by Atom Academy Hyderabad for completing the <b>60-Hour English Language Teaching Internship</b> under Sir Kashif Magsi. Grade: 20/20 Marks (Outstanding).
+          </div>
+        </div>
+        <div class="doc-actions-row">
+          <button class="btn-doc-view" onclick="openDocModal('certificate')">
+            <span>👁️</span> Read
+          </button>
+          <a class="btn-doc-dl" href="Waliullah_Magsi_Internship_Certificate.pdf" download="Waliullah_Magsi_Internship_Certificate.pdf" target="_blank">
+            <span>⬇</span> PDF
+          </a>
+          <a class="btn-doc-dl" href="images/internship_certificate.jpg" download="Waliullah_Magsi_Internship_Certificate.jpg" target="_blank">
+            <span>🖼️</span> JPG
+          </a>
+        </div>
+      </div>
+
+      <!-- Doc 2: Supervisor Evaluation Form (Top Feature) -->
+      <div class="doc-card" style="border:1.5px solid #1e3a5f">
+        <div>
+          <div class="doc-top">
+            <div class="doc-icon-badge" style="background:rgba(30,58,95,0.1);color:#1e3a5f">⭐</div>
+            <div class="doc-info">
+              <span class="verify-badge" style="background:#1e3a5f;color:#ffffff;display:inline-block;margin-bottom:4px">Signed &amp; Stamped</span>
+              <h3 style="margin:0 0 4px">Supervisor Feedback Form (20/20 Marks)</h3>
+              <p>University of Sindh IELL · Evaluated by Sir Kashif Magsi</p>
+            </div>
+          </div>
+          <div class="doc-card-thumb" onclick="openDocModal('evaluation')">
+            <img src="images/supervisor_evaluation.jpg" alt="Official Supervisor Feedback Sheet - Waliullah Magsi">
+          </div>
+          <div class="doc-preview-text">
+            <b>Official Evaluation &amp; Feedback:</b>
+            Full 20/20 perfect score awarded by Host Supervisor <b>Sir Kashif Magsi</b> (Teacher, Atom Academy Hyderabad) across all 9 criteria. Remarks: <i>"Waliullah demonstrated Excellent performance. He completed his tasks with dedication and rigorous efforts."</i>
+          </div>
+        </div>
+        <div class="doc-actions-row">
+          <button class="btn-doc-view" onclick="openDocModal('evaluation')">
+            <span>👁️</span> Read
+          </button>
+          <a class="btn-doc-dl" href="Supervisor_Evaluation_Form_Waliullah_Magsi.pdf" download="Supervisor_Evaluation_Form_Waliullah_Magsi.pdf" target="_blank">
+            <span>⬇</span> PDF
+          </a>
+          <a class="btn-doc-dl" href="images/supervisor_evaluation.jpg" download="Supervisor_Evaluation_Form_Waliullah_Magsi.jpg" target="_blank">
+            <span>🖼️</span> JPG
+          </a>
+        </div>
+      </div>
+
+      <!-- Doc 3: Complete 26-Day Logbook (60 Hours) -->
       <div class="doc-card">
         <div>
           <div class="doc-top">
             <div class="doc-icon-badge">📑</div>
             <div class="doc-info">
-              <h3>20-Day Official Internship Log</h3>
-              <p>Internship_Log_Day_20_Fresh_Copy.pdf</p>
+              <span class="verify-badge" style="display:inline-block;margin-bottom:4px">60 Hours Complete</span>
+              <h3 style="margin:0 0 4px">Complete 26-Day Official Internship Log</h3>
+              <p>Internship_Log_Complete_60_Hours.pdf · Days 1 to 26</p>
             </div>
           </div>
-          <div class="doc-preview-text" style="margin-top:12px">
+          <div class="doc-card-thumb" onclick="openDocModal('logbookDoc')">
+            <img src="images/internship_log_p4.png" alt="Logbook Page 4 (Days 21–26)">
+          </div>
+          <div class="doc-preview-text">
             <b>Document Overview:</b>
-            Complete 18-page signed logbook from Day 1 to Day 20 recording 46 logged hours, daily activities, and skills developed at Atom Academy Hyderabad.
+            Complete 4-page verified logbook from Day 1 (04-09-2026) to Day 26 (10-10-2026) recording 60 logged hours, daily activities, and skills developed at Atom Academy Hyderabad, officially signed by Sir Kashif Magsi.
           </div>
         </div>
         <div class="doc-actions-row">
           <button class="btn-doc-view" onclick="openDocModal('logbookDoc')">
             <span>📖</span> Read
           </button>
-          <a class="btn-doc-dl" href="Internship_Log_Day_20_Fresh_Copy.pdf" download target="_blank">
+          <a class="btn-doc-dl" href="Internship_Log_Complete_60_Hours.pdf" download="Internship_Log_Complete_60_Hours.pdf" target="_blank">
             <span>⬇</span> PDF
           </a>
         </div>
       </div>
 
-      <!-- Doc 2: Reflective Log Week 01 -->
+      <!-- Doc 4: Reflective Log Week 01 -->
       <div class="doc-card">
         <div>
           <div class="doc-top">
@@ -2660,7 +2758,7 @@ button {
         </div>
       </div>
 
-      <!-- Doc 3: Reflective Log Week 02 -->
+      <!-- Doc 5: Reflective Log Week 02 -->
       <div class="doc-card">
         <div>
           <div class="doc-top">
@@ -2685,7 +2783,7 @@ button {
         </div>
       </div>
 
-      <!-- Doc 4: Reflective Log Week 03 -->
+      <!-- Doc 6: Reflective Log Week 03 -->
       <div class="doc-card">
         <div>
           <div class="doc-top">
@@ -2710,7 +2808,7 @@ button {
         </div>
       </div>
 
-      <!-- Doc 5: Internship Guidelines -->
+      <!-- Doc 7: Internship Guidelines -->
       <div class="doc-card">
         <div>
           <div class="doc-top">
@@ -2735,7 +2833,7 @@ button {
         </div>
       </div>
 
-      <!-- Doc 6: Complete 60-Hour Portfolio Summary -->
+      <!-- Doc 8: Complete 60-Hour Portfolio Summary -->
       <div class="doc-card">
         <div>
           <div class="doc-top">
@@ -2747,7 +2845,7 @@ button {
           </div>
           <div class="doc-preview-text" style="margin-top:12px">
             <b>Document Overview:</b>
-            Comprehensive academic portfolio featuring 3 weeks of evidence, 20 days logbook (46h of 60h logged), 3 weekly reflective logs, and supervisor evaluation.
+            Comprehensive academic portfolio featuring 3 weeks of photographic evidence, 26 days logbook (60h completed), 3 weekly reflections, 20/20 evaluation, and certificate.
           </div>
         </div>
         <div class="doc-actions-row">
@@ -2768,90 +2866,67 @@ button {
   <section class="card-section" id="supervisor">
     <div class="section-header-row">
       <div>
-        <span class="pill-section-tag">Assessment Rubric</span>
-        <h2 class="section-title">Supervisor's Feedback &amp; Evaluation</h2>
-        <p class="section-desc">Host supervisor evaluation from <b>Sir Kashif Magsi</b> at <b>Atom Academy Hyderabad</b> on the official IELL evaluation rubric.</p>
+        <span class="pill-section-tag">Official Assessment</span>
+        <h2 class="section-title">Supervisor's Feedback &amp; Performance Evaluation (20/20 Marks)</h2>
+        <p class="section-desc">Official signed evaluation from Host Supervisor <b>Sir Kashif Magsi</b> at <b>Atom Academy Hyderabad</b> on the University of Sindh IELL rubric.</p>
       </div>
     </div>
 
     <div class="eval-grid">
-      <div class="eval-table-wrap">
+      <!-- Left Column: Visual Sheet Preview -->
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="border:1.5px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.05);background:#ffffff;cursor:pointer" onclick="openDocModal('evaluation')">
+          <img src="images/supervisor_evaluation.jpg" alt="Official Signed Supervisor Evaluation Form" style="width:100%;height:380px;object-fit:cover;object-position:top;display:block">
+          <div style="padding:12px 16px;background:#fafaf8;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;font-size:12.5px">
+            <span><b>Official Evaluation Sheet:</b> 20/20 Marks · 60h</span>
+            <span class="verify-badge">✓ Signed by Kashif Magsi</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn-primary-pill" style="font-size:12.5px;padding:9px 16px" onclick="openDocModal('evaluation')">
+            <span>👁️</span> View Full Evaluation Sheet (Big Box)
+          </button>
+          <a class="btn-secondary-pill" style="font-size:12.5px;padding:9px 16px" href="Supervisor_Evaluation_Form_Waliullah_Magsi.pdf" download="Supervisor_Evaluation_Form_Waliullah_Magsi.pdf" target="_blank">
+            <span>⬇</span> Download Form (PDF)
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Official Rubric Scorecard & Remarks -->
+      <div class="eval-table-wrap" style="padding:16px">
+        <h3 style="margin:0 0 12px;font-size:15px;color:var(--text-main)">Official Criterion Marks (20/20 Scorecard)</h3>
         <table class="eval-table">
           <thead>
             <tr>
               <th>Evaluation Criterion</th>
-              <th style="width:90px">Max Marks</th>
-              <th style="width:130px">Assigned Marks</th>
+              <th style="width:75px">Max</th>
+              <th style="width:125px">Assigned Marks</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Attendance &amp; Punctuality</td>
-              <td>2</td>
-              <td><b>2 / 2</b> (100% Punctual)</td>
-            </tr>
-            <tr>
-              <td>Professional Conduct &amp; Ethics</td>
-              <td>2</td>
-              <td><b>2 / 2</b> (Exemplary)</td>
-            </tr>
-            <tr>
-              <td>Communication Skills</td>
-              <td>3</td>
-              <td><b>3 / 3</b> (Clear &amp; Engaging)</td>
-            </tr>
-            <tr>
-              <td>Teamwork &amp; Student Rapport</td>
-              <td>2</td>
-              <td><b>2 / 2</b> (Highly Collaborative)</td>
-            </tr>
-            <tr>
-              <td>Quality of Assigned Work &amp; Teaching</td>
-              <td>4</td>
-              <td><b>4 / 4</b> (Exceptional Delivery)</td>
-            </tr>
-            <tr>
-              <td>Initiative &amp; Problem Solving</td>
-              <td>3</td>
-              <td><b>3 / 3</b> (Proactive Feedback)</td>
-            </tr>
-            <tr>
-              <td>Responsibility &amp; Documentation</td>
-              <td>2</td>
-              <td><b>2 / 2</b> (Meticulous Logbook)</td>
-            </tr>
-            <tr>
-              <td>Adaptability in Instruction</td>
-              <td>2</td>
-              <td><b>2 / 2</b> (Student-Centred Shift)</td>
-            </tr>
-            <tr>
-              <td>Overall Performance</td>
-              <td>2</td>
-              <td><b>2 / 2</b> (Distinguished)</td>
-            </tr>
-            <tr>
-              <td><b>Total Marks Awarded</b></td>
-              <td><b>20</b></td>
-              <td><b>20 / 20 (Grade: A+)</b></td>
+            <tr><td>Attendance &amp; punctuality</td><td>2</td><td><b>2 / 2</b> (100% Punctual)</td></tr>
+            <tr><td>Professional conduct</td><td>2</td><td><b>2 / 2</b> (Exemplary)</td></tr>
+            <tr><td>Communication skills</td><td>3</td><td><b>3 / 3</b> (Clear &amp; Engaging)</td></tr>
+            <tr><td>Teamwork</td><td>2</td><td><b>2 / 2</b> (Collaborative)</td></tr>
+            <tr><td>Quality of assigned work</td><td>2</td><td><b>2 / 2</b> (High Quality)</td></tr>
+            <tr><td>Initiative</td><td>3</td><td><b>3 / 3</b> (Proactive)</td></tr>
+            <tr><td>Responsibility</td><td>2</td><td><b>2 / 2</b> (Dedicated)</td></tr>
+            <tr><td>Adaptability</td><td>2</td><td><b>2 / 2</b> (Student-Centred)</td></tr>
+            <tr><td>Overall performance</td><td>2</td><td><b>2 / 2</b> (Excellent)</td></tr>
+            <tr style="background:#f4fbf7;font-weight:800;color:#065f46">
+              <td><b>Total Marks Awarded</b></td><td><b>20</b></td><td><b>20 / 20 (Grade: A+)</b></td>
             </tr>
           </tbody>
         </table>
-      </div>
 
-      <div class="eval-summary-card">
-        <div class="eval-score-circle">
-          <span class="big">20/20</span>
-          <span class="sub">100% Score</span>
-        </div>
-
-        <div class="eval-comments-box">
-          <b style="color:var(--text-main);display:block;margin-bottom:4px">Sir Kashif Magsi (Host Supervisor Remarks):</b>
-          “Waliullah exhibited remarkable dedication throughout his 46 hours of logged instruction at Atom Academy Hyderabad. In teaching the Basic English Grammar course and coaching students for Sindh University entry test preparation, he showed exceptional pedagogical skill, diagnostic rigor, and genuine care for student progress.”
-        </div>
-
-        <div style="font-size:11.5px;color:var(--text-light);text-align:center">
-          Verified by Sir Kashif Magsi · Atom Academy Hyderabad
+        <div class="eval-comments-box" style="margin-top:16px">
+          <b style="color:var(--text-main);display:block;margin-bottom:6px">Sir Kashif Magsi (Official Handwritten Feedback):</b>
+          <i style="color:var(--text-main);font-size:13.5px;line-height:1.5;display:block;margin-bottom:8px">“Waliullah demonstrated Excellent performance. He completed his tasks with dedication and rigorous efforts.”</i>
+          <div style="font-size:11.5px;color:var(--text-light);border-top:1px dashed var(--line);padding-top:8px">
+            <b>Signature:</b> Kashif &nbsp;|&nbsp; <b>Name of Supervisor:</b> Kashif Magsi<br>
+            <b>Designation:</b> Teacher &nbsp;|&nbsp; <b>Institute:</b> Atom Academy Hyderabad<br>
+            <b>Number of hours logged:</b> 60 hours
+          </div>
         </div>
       </div>
     </div>
@@ -2873,13 +2948,13 @@ button {
       <div class="spec-card">
         <b style="font-size:14.5px;color:var(--text-main)">📑 Executive Academic Report (1,150 Words)</b>
         <p style="font-size:13px;color:var(--text-muted);line-height:1.6">
-          The 60-hour teaching internship is hosted at <b>Atom Academy Hyderabad</b> under the mentorship of Host Supervisor <b>Sir Kashif Magsi</b>, in coordination with the Institute of English Language &amp; Literature (IELL), University of Sindh. To date, <b>46 hours have been completed across 20 verified working days</b>, with 14 hours remaining to complete the 60-hour target.
+          The 60-hour teaching internship was completed at <b>Atom Academy Hyderabad</b> under the mentorship of Host Supervisor <b>Sir Kashif Magsi</b>, in coordination with the Institute of English Language &amp; Literature (IELL), University of Sindh. All <b>60 hours across 26 verified working days have been successfully completed</b>, fulfilling 100% of the institutional internship requirement with a perfect evaluation score of <b>20/20 marks (Grade: Outstanding)</b>.
         </p>
         <p style="font-size:13px;color:var(--text-muted);line-height:1.6">
-          The curriculum focuses on two core pedagogical streams: a foundational <b>Basic English Grammar Course</b> and targeted <b>Sindh University Entry Test Preparation</b>. Instruction covers syntax (sentence types, clause boundaries), morphology (8 parts of speech, pronouns, modifiers, prepositions, conjunctions), non-finite verbs (gerunds and participles), and the 12-tense timeline system.
+          The curriculum focused on foundational <b>Basic English Grammar</b> and targeted <b>Sindh University Entry Test Preparation</b>. Instruction covered syntax (sentence types, clause boundaries), morphology (8 parts of speech, pronouns, modifiers, prepositions, conjunctions), non-finite verbs (gerunds and participles), the 12-tense timeline system, voice transformation, and reported speech.
         </p>
         <p style="font-size:13px;color:var(--text-muted);line-height:1.6">
-          Formative Saturday testing yielded student scores ranging from 55 to 75 marks. 1-on-1 feedback and diagnostic script reviews conducted at Atom Academy Hyderabad have systematically identified learning gaps and built learner confidence.
+          Formative weekly assessments and grand grammar reviews yielded strong student performance. 1-on-1 diagnostic feedback conducted at Atom Academy Hyderabad systematically resolved learning gaps and built learner confidence.
         </p>
       </div>
 
@@ -2890,10 +2965,10 @@ button {
         </p>
         <ul style="list-style:square inside;font-size:12px;color:var(--text-muted);display:flex;flex-direction:column;gap:5px;margin:6px 0">
           <li><b>Slide 1:</b> Introduction &amp; Placement at Atom Academy Hyderabad</li>
-          <li><b>Slide 2:</b> Supervision under Sir Kashif Magsi &amp; 46/60h Status</li>
+          <li><b>Slide 2:</b> Supervision under Sir Kashif Magsi &amp; 60h Completed Status (20/20 Marks)</li>
           <li><b>Slide 3:</b> Basic English Grammar Course Delivery</li>
           <li><b>Slide 4:</b> Sindh University Entry Test Preparation &amp; Mock Testing</li>
-          <li><b>Slide 5:</b> 3-Weeks Photographic Evidence &amp; 55–75 Score Analytics</li>
+          <li><b>Slide 5:</b> 3-Weeks Photographic Evidence, Evaluation Sheet &amp; Certificate</li>
         </ul>
         <div style="margin-top:6px">
           <button class="btn-doc-view" style="width:100%" onclick="alert('Viva defense presentation slides prepared for Atom Academy Hyderabad internship.')">
@@ -2981,7 +3056,7 @@ button {
      JAVASCRIPT LOGIC
      ======================================================== -->
 <script>
-// Complete 20-Day Logbook Data matching Internship_Log_Day_20_Fresh_Copy.pdf
+// Complete 26-Day Logbook Data (60 Hours Complete)
 var logData = [
   { day: 1, date: "04-09-2026 (Friday)", week: "week1", act: "Attended an internship orientation session and learned about the internship process, placement selection, required tasks, evidence collection, and report submission. Instructed to apply teaching methods and linguistic theories in real-life settings.", skill: "Communication skills, understanding of internship requirements, teaching-method awareness, and documentation skills.", hours: "01", cat: "teaching" },
   { day: 2, date: "10-09-2026 (Thursday)", week: "week1", act: "Attended the internship class and received updates regarding the revised internship hours. Clarified internship-related queries with Ma'am Bakhtawar.", skill: "Communication and understanding of internship hours.", hours: "01", cat: "teaching" },
@@ -3002,7 +3077,13 @@ var logData = [
   { day: 17, date: "30-09-2026 (Wednesday)", week: "week3", act: "Started a new grammar topic on Tenses. Delivered a grammar lecture covering Present To Be Tense, Past To Be Tense, and Future To Be Tense with explanations and examples. Conducted regular passage-reading practice and vocabulary practice. Continued University of Sindh Entry Test preparation.", skill: "Grammar teaching, tense usage, sentence formation, communication, reading comprehension, vocabulary development, pronunciation, and entry-test preparation.", hours: "02", cat: "teaching" },
   { day: 18, date: "01-10-2026 (Thursday)", week: "week3", act: "Continued the grammar topic on Tenses. Delivered a grammar lecture covering Present Simple, Past Simple, and Future Simple Tenses, followed by Present Continuous, Past Continuous, and Future Continuous Tenses with explanations and examples. Conducted regular reading-comprehension practice and vocabulary practice. Continued University of Sindh Entry Test preparation.", skill: "Grammar teaching, tense usage, sentence formation, communication, reading comprehension, vocabulary development, pronunciation, and entry-test preparation.", hours: "02", cat: "teaching" },
   { day: 19, date: "02-10-2026 (Friday)", week: "week3", act: "Continued the grammar topic on Tenses. Delivered a grammar lecture covering Present Perfect, Past Perfect, Present Perfect Continuous, and Past Perfect Continuous Tenses with explanations and examples. Conducted regular passage-reading and vocabulary practice. Revised the whole week's grammar lectures, with special focus on University of Sindh Entry Test preparation. Prepared students for Saturday's assessment.", skill: "Grammar teaching, tense usage, revision and reinforcement, communication, reading comprehension, vocabulary development, test preparation, and entry-test preparation.", hours: "03", cat: "entry" },
-  { day: 20, date: "03-10-2026 (Saturday)", week: "week3", act: "Conducted the weekly assessment and the final practice test for students preparing for the University of Sindh Entry Test. Spent approximately one hour preparing a challenging test. Conducted the University of Sindh entry-test paper along with a separate grammar test. Students performed well in the grammar portion, and their performance was satisfactory. The initial response to the entry-test paper was encouraging; detailed scores will be recorded after checking the tests.", skill: "Test preparation, assessment design, grammar assessment, entry-test preparation, evaluation, time management, and student performance analysis.", hours: "04", cat: "entry" }
+  { day: 20, date: "03-10-2026 (Saturday)", week: "week3", act: "Conducted the weekly assessment and the final practice test for students preparing for the University of Sindh Entry Test. Spent approximately one hour preparing a challenging test. Conducted the University of Sindh entry-test paper along with a separate grammar test. Students performed well in the grammar portion, and their performance was satisfactory. The initial response to the entry-test paper was encouraging; detailed scores will be recorded after checking the tests.", skill: "Test preparation, assessment design, grammar assessment, entry-test preparation, evaluation, time management, and student performance analysis.", hours: "04", cat: "entry" },
+  { day: 21, date: "05-10-2026 (Monday)", week: "week4", act: "Taught modal verbs and their use in translation; discussed test results; continued reading, vocabulary, and self-introduction practice.", skill: "Modal verb instruction, grammatical translation, diagnostic feedback, speaking confidence, reading fluency, and vocabulary reinforcement.", hours: "02", cat: "teaching" },
+  { day: 22, date: "06-10-2026 (Tuesday)", week: "week4", act: "Started active and passive voice; explained rules, sentence structure, and conversion with guided practice; continued reading and vocabulary.", skill: "Voice transformation, syntactic structure analysis, active-passive conversion rules, guided practice, reading comprehension, and vocabulary development.", hours: "02", cat: "teaching" },
+  { day: 23, date: "07-10-2026 (Wednesday)", week: "week4", act: "Completed active and passive voice; checked homework, corrected errors, and continued passage-reading and vocabulary practice.", skill: "Error correction, formative feedback, homework review, mastery of passive voice constructions, pronunciation, and vocabulary enrichment.", hours: "02", cat: "teaching" },
+  { day: 24, date: "08-10-2026 (Thursday)", week: "week4", act: "Attended university e-portfolio guidance; at the academy, started narration/reported speech and continued reading and vocabulary practice.", skill: "Academic portfolio development, direct and indirect speech instruction, reporting verbs, tense shifting rules, reading fluency, and vocabulary.", hours: "03", cat: "teaching" },
+  { day: 25, date: "09-10-2026 (Friday)", week: "week4", act: "Completed narration/reported speech and taught question tags; checked homework, clarified errors, and continued reading and vocabulary.", skill: "Complex reported speech mastery, question tag formation, intonation patterns, error clarification, homework analysis, and reading skills.", hours: "02", cat: "teaching" },
+  { day: 26, date: "10-10-2026 (Saturday)", week: "week4", act: "Final day: conducted a comprehensive grand grammar test, reviewed students' performance, provided final feedback, and concluded teaching.", skill: "Comprehensive assessment administration, summative evaluation, diagnostic review, pedagogical closure, and student achievement feedback.", hours: "03", cat: "entry" }
 ];
 
 function renderLogTable(items) {
@@ -3014,7 +3095,7 @@ function renderLogTable(items) {
       + '<td>' + item.act + '</td>'
       + '<td>' + item.skill + '</td>'
       + '<td><b>' + item.hours + ' h</b></td>'
-      + '<td><span class="verify-badge">✓ Logged</span></td>'
+      + '<td><span class="verify-badge">✓ Signed</span></td>'
       + '</tr>';
   }).join('');
 }
@@ -3026,7 +3107,7 @@ function filterLogs(category) {
   event.target.classList.add('active');
   if (category === 'all') {
     renderLogTable(logData);
-  } else if (category === 'week1' || category === 'week2' || category === 'week3') {
+  } else if (category === 'week1' || category === 'week2' || category === 'week3' || category === 'week4') {
     var filtered = logData.filter(function(i) { return i.week === category; });
     renderLogTable(filtered);
   } else {
@@ -3092,20 +3173,108 @@ function openDocModal(type) {
   var dl = document.getElementById('docModalDl');
   var body = document.getElementById('docModalBody');
 
-  if (type === 'logbookDoc') {
-    title.innerText = "Complete 20-Day Official Internship Log";
-    sub.innerText = "Internship_Log_Day_20_Fresh_Copy.pdf · Days 1 to 20 Verified (46 Hours Logged)";
-    dl.href = "Internship_Log_Day_20_Fresh_Copy.pdf";
-    body.innerHTML = '<div style="background:#fcfcf9;padding:14px;border-radius:10px;border:1px solid var(--line);margin-bottom:14px">'
-      + '<b style="color:var(--text-main);font-size:14.5px">Official Signed Logbook: 20 Working Days (46 Hours Logged)</b><br>'
-      + '<span style="font-size:12.5px;color:var(--text-muted)">Candidate: <b>Waliullah</b> &nbsp;|&nbsp; Host: <b>Atom Academy Hyderabad</b> &nbsp;|&nbsp; Supervisor: <b>Sir Kashif Magsi</b></span>'
+  if (type === 'certificate') {
+    title.innerText = "Internship Certificate of Appreciation";
+    sub.innerText = "Atom Academy Hyderabad · Issued to Mr. Waliullah Magsi (BS Applied Linguistics)";
+    dl.href = "Waliullah_Magsi_Internship_Certificate.pdf";
+    dl.setAttribute('download', 'Waliullah_Magsi_Internship_Certificate.pdf');
+    body.innerHTML = '<div style="margin-bottom:16px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;background:#fcfcf9;border:1px solid var(--line);border-radius:10px;padding:12px 16px">'
+      + '<div><span class="verify-badge" style="background:#065f46;color:#ffffff">✓ Official Attestation</span> <b style="margin-left:8px;font-size:14.5px;color:var(--text-main)">Certificate of Appreciation</b></div>'
+      + '<div style="font-size:12.5px;color:var(--text-muted)">Issued: <b>10 October 2026</b> · Atom Academy Hyderabad</div>'
       + '</div>'
-      + '<p style="margin-bottom:12px">Meticulously maintained daily log covering 20 complete days (46 hours directly logged towards the 60-hour internship requirement).</p>'
+      + '<div style="border:1.5px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,0.06);background:#000;margin-bottom:16px">'
+      + '<img src="images/internship_certificate.jpg" alt="Certificate of Appreciation - Waliullah Magsi" style="width:100%;height:auto;display:block">'
+      + '</div>'
+      + '<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px">'
+      + '<a href="Waliullah_Magsi_Internship_Certificate.pdf" download="Waliullah_Magsi_Internship_Certificate.pdf" class="btn-primary-pill" style="font-size:12.5px;padding:9px 16px"><span>⬇</span> Download Certificate (PDF)</a>'
+      + '<a href="images/internship_certificate.jpg" download="Waliullah_Magsi_Internship_Certificate.jpg" class="btn-secondary-pill" style="font-size:12.5px;padding:9px 16px"><span>🖼️</span> Download High-Res JPG</a>'
+      + '</div>'
+      + '<div style="padding:14px;background:#fafaf8;border:1px solid var(--line);border-radius:10px;font-size:12.5px;line-height:1.6">'
+      + '<b>Institutional Signatories:</b><br>'
+      + '• <b>Sir Kashif Magsi</b> — Internship Supervisor & Faculty Instructor, Atom Academy Hyderabad.<br>'
+      + '• <b>Prof. A. R. Magsi</b> — Academic Director & Head of Academic Affairs, Atom Academy Hyderabad.<br>'
+      + '• <b>Awardee:</b> Mr. Waliullah Magsi, BS Applied Linguistics, University of Sindh, Jamshoro.<br>'
+      + '• <b>Internship Duration:</b> 60 Hours (September 04, 2026 – October 10, 2026) · Grade: 20/20 Marks (100% Score).'
+      + '</div>';
+  } else if (type === 'evaluation') {
+    title.innerText = "Supervisor's Evaluation & Feedback (20/20 Marks)";
+    sub.innerText = "University of Sindh, Faculty of Arts, IELL · Evaluated & Signed by Sir Kashif Magsi";
+    dl.href = "Supervisor_Evaluation_Form_Waliullah_Magsi.pdf";
+    dl.setAttribute('download', 'Supervisor_Evaluation_Form_Waliullah_Magsi.pdf');
+    body.innerHTML = '<div style="margin-bottom:16px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;background:#fcfcf9;border:1px solid var(--line);border-radius:10px;padding:12px 16px">'
+      + '<div><span class="verify-badge" style="background:#1e3a5f;color:#ffffff">✓ Official Evaluation</span> <b style="margin-left:8px;font-size:14.5px;color:var(--text-main)">Total Score: 20 / 20 Marks (100% Perfect Score)</b></div>'
+      + '<div style="font-size:12.5px;color:var(--text-muted)">Supervisor: <b>Sir Kashif Magsi (Teacher, Atom Academy)</b></div>'
+      + '</div>'
+      + '<div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:16px;align-items:start;margin-bottom:16px">'
+      + '<div style="border:1.5px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.05);background:#000">'
+      + '<img src="images/supervisor_evaluation.jpg" alt="Supervisor Evaluation Sheet" style="width:100%;height:auto;display:block">'
+      + '</div>'
+      + '<div style="display:flex;flex-direction:column;gap:12px">'
+      + '<div style="border:1px solid var(--line);border-radius:10px;padding:14px;background:#ffffff">'
+      + '<h4 style="margin:0 0 10px;font-size:14px;border-bottom:1px solid var(--line);padding-bottom:6px">Official Criterion Marks Breakdown</h4>'
+      + '<table style="width:100%;border-collapse:collapse;font-size:12px">'
+      + '<tr style="border-bottom:1px solid #eee"><td style="padding:4px 0">Attendance & punctuality</td><td style="text-align:right"><b>2 / 2</b></td></tr>'
+      + '<tr style="border-bottom:1px solid #eee"><td style="padding:4px 0">Professional conduct</td><td style="text-align:right"><b>2 / 2</b></td></tr>'
+      + '<tr style="border-bottom:1px solid #eee"><td style="padding:4px 0">Communication skills</td><td style="text-align:right"><b>3 / 3</b></td></tr>'
+      + '<tr style="border-bottom:1px solid #eee"><td style="padding:4px 0">Teamwork</td><td style="text-align:right"><b>2 / 2</b></td></tr>'
+      + '<tr style="border-bottom:1px solid #eee"><td style="padding:4px 0">Quality of assigned work</td><td style="text-align:right"><b>2 / 2</b></td></tr>'
+      + '<tr style="border-bottom:1px solid #eee"><td style="padding:4px 0">Initiative</td><td style="text-align:right"><b>3 / 3</b></td></tr>'
+      + '<tr style="border-bottom:1px solid #eee"><td style="padding:4px 0">Responsibility</td><td style="text-align:right"><b>2 / 2</b></td></tr>'
+      + '<tr style="border-bottom:1px solid #eee"><td style="padding:4px 0">Adaptability</td><td style="text-align:right"><b>2 / 2</b></td></tr>'
+      + '<tr style="border-bottom:1px solid #eee"><td style="padding:4px 0">Overall performance</td><td style="text-align:right"><b>2 / 2</b></td></tr>'
+      + '<tr style="background:#fbfbf9;font-weight:700"><td style="padding:6px 0">Total Marks Awarded</td><td style="text-align:right;color:#065f46"><b>20 / 20 (Grade: A+)</b></td></tr>'
+      + '</table>'
+      + '</div>'
+      + '<div style="border:1px solid var(--line);border-radius:10px;padding:12px;background:#fcfcf9;font-size:12.5px;line-height:1.5">'
+      + '<b>Host Supervisor Remarks (Handwritten):</b><br>'
+      + '<i>“Waliullah demonstrated Excellent performance. He completed his tasks with dedication and rigorous efforts.”</i><br><br>'
+      + '<b>Signature:</b> Kashif &nbsp;|&nbsp; <b>Name:</b> Kashif Magsi<br>'
+      + '<b>Designation:</b> Teacher &nbsp;|&nbsp; <b>Institute:</b> Atom Academy Hyderabad<br>'
+      + '<b>Total Hours Logged:</b> 60 hours'
+      + '</div>'
+      + '<div style="display:flex;gap:10px;flex-wrap:wrap">'
+      + '<a href="Supervisor_Evaluation_Form_Waliullah_Magsi.pdf" download="Supervisor_Evaluation_Form_Waliullah_Magsi.pdf" class="btn-primary-pill" style="font-size:12px;padding:8px 14px"><span>⬇</span> Download Form (PDF)</a>'
+      + '<a href="images/supervisor_evaluation.jpg" download="Supervisor_Evaluation_Form_Waliullah_Magsi.jpg" class="btn-secondary-pill" style="font-size:12px;padding:8px 14px"><span>🖼️</span> Download JPG</a>'
+      + '</div>'
+      + '</div>'
+      + '</div>';
+  } else if (type === 'logbookDoc') {
+    title.innerText = "Complete 26-Day Official Internship Log (60 Hours Complete)";
+    sub.innerText = "Internship_Log_Complete_60_Hours.pdf · Days 1 to 26 Verified (60 Hours Complete)";
+    dl.href = "Internship_Log_Complete_60_Hours.pdf";
+    dl.setAttribute('download', 'Internship_Log_Complete_60_Hours.pdf');
+    body.innerHTML = '<div style="background:#fcfcf9;padding:14px;border-radius:10px;border:1px solid var(--line);margin-bottom:14px">'
+      + '<b style="color:var(--text-main);font-size:14.5px">Official Signed Logbook: 26 Working Days (60 Hours Complete)</b><br>'
+      + '<span style="font-size:12.5px;color:var(--text-muted)">Candidate: <b>Waliullah Magsi</b> &nbsp;|&nbsp; Host: <b>Atom Academy Hyderabad</b> &nbsp;|&nbsp; Supervisor: <b>Sir Kashif Magsi</b></span>'
+      + '</div>'
+      + '<p style="margin-bottom:12px">Meticulously maintained daily log covering all 26 working days (60 hours directly logged and officially verified by Sir Kashif Magsi).</p>'
+      + '<div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:12px;margin-bottom:16px">'
+      + '<div style="border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#f9f9f6">'
+      + '<img src="images/internship_log_p1.png" alt="Logbook Page 1" style="width:100%;height:180px;object-fit:cover;object-position:top;display:block;cursor:pointer" onclick="openLightbox(\'images/internship_log_p1.png\', \'Logbook Page 1 (Days 1–7)\', \'Official signed logbook page 1 covering orientation, sentence kinds, phrases, clauses, and parts of speech.\')">'
+      + '<div style="padding:8px 10px;font-size:11.5px;font-weight:700;text-align:center">Page 1: Days 1–7 (13h)</div>'
+      + '</div>'
+      + '<div style="border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#f9f9f6">'
+      + '<img src="images/internship_log_p2.png" alt="Logbook Page 2" style="width:100%;height:180px;object-fit:cover;object-position:top;display:block;cursor:pointer" onclick="openLightbox(\'images/internship_log_p2.png\', \'Logbook Page 2 (Days 8–14)\', \'Official signed logbook page 2 covering weekly tests, verbs, adjectives, adverbs, prepositions, and conjunctions.\')">'
+      + '<div style="padding:8px 10px;font-size:11.5px;font-weight:700;text-align:center">Page 2: Days 8–14 (18h)</div>'
+      + '</div>'
+      + '<div style="border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#f9f9f6">'
+      + '<img src="images/internship_log_p3.png" alt="Logbook Page 3" style="width:100%;height:180px;object-fit:cover;object-position:top;display:block;cursor:pointer" onclick="openLightbox(\'images/internship_log_p3.png\', \'Logbook Page 3 (Days 15–20)\', \'Official signed logbook page 3 covering self-introduction, gerunds, participles, articles, complete tense system, and entry test.\')">'
+      + '<div style="padding:8px 10px;font-size:11.5px;font-weight:700;text-align:center">Page 3: Days 15–20 (15h)</div>'
+      + '</div>'
+      + '<div style="border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#f9f9f6">'
+      + '<img src="images/internship_log_p4.png" alt="Logbook Page 4" style="width:100%;height:180px;object-fit:cover;object-position:top;display:block;cursor:pointer" onclick="openLightbox(\'images/internship_log_p4.png\', \'Logbook Page 4 (Days 21–26)\', \'Official signed logbook page 4 covering modal verbs, active/passive voice, narration, question tags, and final grand test (Total 60h).\')">'
+      + '<div style="padding:8px 10px;font-size:11.5px;font-weight:700;text-align:center">Page 4: Days 21–26 (14h · Total 60h)</div>'
+      + '</div>'
+      + '</div>'
+      + '<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px">'
+      + '<a href="Internship_Log_Complete_60_Hours.pdf" download="Internship_Log_Complete_60_Hours.pdf" class="btn-primary-pill" style="font-size:12.5px;padding:9px 16px"><span>⬇</span> Download Complete 4-Page PDF (60h)</a>'
+      + '</div>'
       + '<div style="background:#fafaf8;padding:12px;border-radius:8px;font-size:12.5px;line-height:1.6">'
       + '• <b>Week 1 (Days 1–8):</b> Orientation, sentences, phrases/clauses, parts of speech, baseline testing (15h).<br>'
       + '• <b>Week 2 (Days 9–14):</b> Verbs, adjectives, adverbs, prepositions, conjunctions, entry-test practice (15h).<br>'
       + '• <b>Week 3 (Days 15–20):</b> Self-introduction, gerunds, participles, articles, complete tense system, entry-test simulation (16h).<br>'
-      + '• <b>Total:</b> 46 Hours Logged / 60 Hours Total Requirement (14 Hours Remaining).'
+      + '• <b>Week 4 (Days 21–26):</b> Modal verbs, active/passive voice, narration, question tags, and final grand assessment (14h).<br>'
+      + '• <b>Total Hours Logged:</b> 60 Hours (100% Target Met · Evaluated: 20/20 Marks).'
       + '</div>';
   } else if (type === 'week1') {
     title.innerText = "Internship Reflective Log — Week 01";
@@ -3158,15 +3327,16 @@ function openDocModal(type) {
   } else if (type === 'fullSummary') {
     title.innerText = "Complete 60-Hour Portfolio Summary";
     sub.innerText = "Atom Academy Hyderabad · Sir Kashif Magsi · BS Applied Linguistics";
-    dl.href = "#overview";
-    body.innerHTML = '<p style="margin-bottom:12px">Comprehensive portfolio documenting 46 logged hours of the 60-hour internship at Atom Academy Hyderabad under Sir Kashif Magsi, with 3 weeks of photographic evidence and weekly reflections.</p>'
+    dl.href = "Waliullah_Magsi_Internship_Certificate.pdf";
+    body.innerHTML = '<p style="margin-bottom:12px">Comprehensive portfolio documenting all 60 logged hours (26 working days) of the internship at Atom Academy Hyderabad under Sir Kashif Magsi, with 3 weeks of photographic evidence, weekly reflections, official 20/20 supervisor evaluation, and certificate of appreciation.</p>'
       + '<div style="background:#fcfcf9;padding:12px;border-radius:8px;border:1px solid var(--line);font-size:12.5px">'
       + '<b>Summary of Status:</b><br>'
-      + '• Hours Logged: <b>46 Hours (In Progress / 14 Hours Remaining)</b><br>'
+      + '• Hours Logged: <b>60 Hours Completed (100% Target Met · 26 Working Days)</b><br>'
       + '• Host Placement: <b>Atom Academy Hyderabad</b><br>'
       + '• Host Supervisor: <b>Sir Kashif Magsi</b><br>'
-      + '• Formative Assessments Conducted: <b>6 Weekly Tests</b><br>'
-      + '• Supervisor Score: <b>20/20 (Grade: A+)</b>'
+      + '• Formative & Grand Assessments Conducted: <b>7 Comprehensive Tests</b><br>'
+      + '• Supervisor Score: <b>20/20 Marks (Grade: Outstanding / A+)</b><br>'
+      + '• Certificate: <b>Certificate of Appreciation Issued</b>'
       + '</div>';
   }
 
