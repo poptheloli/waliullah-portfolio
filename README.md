@@ -28,7 +28,9 @@ A modern, high-end, responsive web portfolio documenting the completed 26-day / 
   - **Basic English Grammar Course** (Syntax, kinds of sentences, phrases, clauses, 8 parts of speech, modifiers, prepositions, conjunctions, gerunds, participles, 12-tense timeline system, active/passive voice, reported speech, question tags).
   - **Sindh University Entry Test Preparation** (Diagnostic question coaching, syntax mastery, timed practice exams).
 - **Weekly Classroom Evidence:**
-  - 3 Weeks of verified photographic evidence and analytical test outcome charts.
+  - 4 Weeks of verified photographic evidence (8 classroom & activity photos) and analytical test outcome charts.
+- **Weekly Internship Reflective Logs:**
+  - 4 complete weekly reflective logs (Week 01 to Week 04 / Final Week) covering pedagogical observations, CLT methodologies, and Grand Grammar Assessment.
 - **Mobile Responsive Design:**
   - Fully responsive, elegant bento-card interface optimized for desktop, tablet, and mobile devices.
 
@@ -46,6 +48,7 @@ A modern, high-end, responsive web portfolio documenting the completed 26-day / 
 ├── Waliullah_Internship_Weekly_Reflective_Log_Week_01.pdf# Week 01 reflective log
 ├── Waliullah_Internship_Weekly_Reflective_Log_Week_02.pdf# Week 02 reflective log
 ├── Waliullah_Internship_Weekly_Reflective_Log_Week_03.pdf# Week 03 reflective log
+├── Waliullah_Internship_Weekly_Reflective_Log_Week_04.pdf# Week 04 reflective log (Final Week)
 └── images/                                               # Assets and photographic evidence
     ├── internship_certificate.jpg                       # Certificate of Appreciation (High-Res JPG)
     ├── supervisor_evaluation.jpg                        # Official Signed Supervisor Feedback Sheet
@@ -59,7 +62,9 @@ A modern, high-end, responsive web portfolio documenting the completed 26-day / 
     ├── week2_teaching_evidence.png                      # Week 2 Teaching photo
     ├── week2_student_activity.png                       # Week 2 Activity photo
     ├── week3_teaching_evidence.png                      # Week 3 Teaching photo
-    └── week3_student_activity.png                       # Week 3 Activity photo
+    ├── week3_student_activity.png                       # Week 3 Activity photo
+    ├── week4_teaching_evidence.png                      # Week 4 Teaching photo
+    └── week4_student_activity.jpg                       # Week 4 Activity photo (Grand Test)
 ```
 
 ---
