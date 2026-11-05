@@ -27,6 +27,15 @@ A modern, high-end, responsive web portfolio documenting the completed 26-day / 
 - **Instructional Scope:**
   - **Basic English Grammar Course** (Syntax, kinds of sentences, phrases, clauses, 8 parts of speech, modifiers, prepositions, conjunctions, gerunds, participles, 12-tense timeline system, active/passive voice, reported speech, question tags).
   - **Sindh University Entry Test Preparation** (Diagnostic question coaching, syntax mastery, timed practice exams).
+- **Official Final Internship Report (50 Marks):**
+  - Comprehensive 1,150-word final academic report in 6 structured sections:
+    1. *Introduction* (Connecting linguistic theory with pedagogical realities).
+    2. *Organization Profile* (Atom Academy Hyderabad and small-group instructional setup).
+    3. *Job Description and Tasks Performed* (Morphology to syntax, Basic English Grammar, reading, and Sindh University past-paper MCQs).
+    4. *Learning Outcomes and Skills* (CLT, scaffolding, diagnostic, formative & summative assessment).
+    5. *Challenges Faced* (Pedagogical content knowledge, mixed proficiency, and dual-curriculum balance).
+    6. *Conclusion* (Reflective teaching cycle: planning, instruction, observation, assessment, reflection).
+  - Downloadable as a high-resolution PDF (`Waliullah_Magsi_Final_Internship_Report.pdf`) and accessible via full-screen modal reader.
 - **Weekly Classroom Evidence:**
   - 4 Weeks of verified photographic evidence (8 classroom & activity photos) and analytical test outcome charts.
 - **Weekly Internship Reflective Logs:**
@@ -41,6 +50,7 @@ A modern, high-end, responsive web portfolio documenting the completed 26-day / 
 ```text
 ├── index.html                                            # Main web portfolio
 ├── README.md                                             # Project documentation
+├── Waliullah_Magsi_Final_Internship_Report.pdf           # Official Final Internship Report (50 Marks PDF)
 ├── Waliullah_Magsi_Internship_Certificate.pdf            # Official Certificate of Appreciation (PDF)
 ├── Supervisor_Evaluation_Form_Waliullah_Magsi.pdf        # Official Signed Supervisor Evaluation Form (PDF)
 ├── Internship_Log_Complete_60_Hours.pdf                  # Complete 26-day signed logbook (60h PDF)

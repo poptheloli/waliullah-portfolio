@@ -1369,7 +1369,7 @@ button {
 /* ========================================================
    REFLECTIVE JOURNAL (Weeks 01, 02, and 03)
    ======================================================== */
-.journal-tabs {
+.journal-tabs, .report-tabs {
   display: flex;
   gap: 8px;
   margin-bottom: 18px;
@@ -1377,7 +1377,7 @@ button {
 }
 
 @media (max-width: 640px) {
-  .journal-tabs {
+  .journal-tabs, .report-tabs {
     overflow-x: auto;
     flex-wrap: nowrap;
     white-space: nowrap;
@@ -1386,7 +1386,7 @@ button {
   }
 }
 
-.journal-tab-btn {
+.journal-tab-btn, .report-tab-btn {
   background: var(--pill-bg);
   border: 1px solid var(--line);
   border-radius: var(--radius-pill);
@@ -1396,9 +1396,10 @@ button {
   color: var(--text-muted);
   transition: all 0.15s ease;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
-.journal-tab-btn.active {
+.journal-tab-btn.active, .report-tab-btn.active {
   background: var(--primary-dark);
   color: #ffffff;
   border-color: var(--primary-dark);
@@ -2198,7 +2199,7 @@ button {
     <div class="placement-grid">
       <div class="spec-card">
         <b style="font-size:14px;color:var(--text-main)">🏫 Host Placement Institution</b>
-        <p style="font-size:13px;color:var(--text-muted)"><b>Atom Academy Hyderabad</b>. Reputable academic institution in Hyderabad providing premier coaching for secondary, intermediate, and competitive university entrance exams.</p>
+        <p style="font-size:13px;color:var(--text-muted)"><b>Atom Academy Hyderabad</b>. Educational academy located in Hyderabad, Sindh. Instructional activities during the placement focused on Basic English Grammar teaching and preparation for the University of Sindh entry test under host supervision.</p>
       </div>
       <div class="spec-card">
         <b style="font-size:14px;color:var(--text-main)">👨‍🏫 Host Internship Supervisor</b>
@@ -2821,7 +2822,36 @@ button {
         </div>
       </div>
 
-      <!-- Doc 3: Complete 26-Day Logbook (60 Hours) -->
+      <!-- Doc 3: Official Final Internship Report (Top Feature - 50 Marks) -->
+      <div class="doc-card" style="border:1.5px solid #1e3a5f">
+        <div>
+          <div class="doc-top">
+            <div class="doc-icon-badge" style="background:rgba(30,58,95,0.1);color:#1e3a5f">📑</div>
+            <div class="doc-info">
+              <span class="verify-badge" style="background:#1e3a5f;color:#ffffff;display:inline-block;margin-bottom:4px">Degree Report · 50 Marks</span>
+              <h3 style="margin:0 0 4px">Final Internship Report</h3>
+              <p>Atom Academy Hyderabad | Applied Linguistics | University of Sindh</p>
+            </div>
+          </div>
+          <div class="doc-preview-text" style="margin-top:12px">
+            <b>Official Academic Submission (1,150 Words · 6 Sections):</b>
+            Comprehensive final report submitted for BS Applied Linguistics at IELL, University of Sindh, Jamshoro. Connects linguistic theory (morphology, syntax, lexical competence, reading fluency) with practical classroom pedagogy (scaffolding, CLT, formative assessment) and Sindh University entry-test preparation at Atom Academy Hyderabad under Sir Kashif Magsi.
+          </div>
+        </div>
+        <div class="doc-actions-row">
+          <button class="btn-doc-view" onclick="openDocModal('finalReport')">
+            <span>👁️</span> Read
+          </button>
+          <a class="btn-doc-dl" href="Waliullah_Magsi_Final_Internship_Report.pdf" download="Waliullah_Magsi_Final_Internship_Report.pdf" target="_blank">
+            <span>⬇</span> PDF
+          </a>
+          <a class="btn-doc-dl" href="#report">
+            <span>🔍</span> View
+          </a>
+        </div>
+      </div>
+
+      <!-- Doc 4: Complete 26-Day Logbook (60 Hours) -->
       <div class="doc-card">
         <div>
           <div class="doc-top">
@@ -3076,47 +3106,237 @@ button {
   </section>
 
   <!-- ========================================================
-       INTERNSHIP REPORT & VIVA DEFENSE
+       INTERNSHIP REPORT & VIVA DEFENSE (Final Report - 50 Marks)
        ======================================================== -->
   <section class="card-section" id="report">
     <div class="section-header-row">
       <div>
-        <span class="pill-section-tag">Academic Synthesis</span>
-        <h2 class="section-title">Internship Report Summary &amp; Viva Voce Defense</h2>
-        <p class="section-desc">Formal internship report synthesis (50 marks) and 5-minute panel defense outline (30 marks) fulfilling the degree requirement.</p>
+        <span class="pill-section-tag">Degree Submission · 50 Marks</span>
+        <h2 class="section-title">Final Internship Report &amp; Viva Voce Defense</h2>
+        <p class="section-desc">Official 1,150-word academic report submitted to the Institute of English Language &amp; Literature (IELL), University of Sindh, Jamshoro, fulfilling the 50-mark report requirement, alongside the 5-minute panel defense outline (30 marks).</p>
       </div>
     </div>
 
-    <div class="report-grid">
-      <div class="spec-card">
-        <b style="font-size:14.5px;color:var(--text-main)">📑 Executive Academic Report (1,150 Words)</b>
-        <p style="font-size:13px;color:var(--text-muted);line-height:1.6">
-          The 60-hour teaching internship was completed at <b>Atom Academy Hyderabad</b> under the mentorship of Host Supervisor <b>Sir Kashif Magsi</b>, in coordination with the Institute of English Language &amp; Literature (IELL), University of Sindh. All <b>60 hours across 26 verified working days have been successfully completed</b>, fulfilling 100% of the institutional internship requirement with a perfect evaluation score of <b>20/20 marks (Grade: Outstanding)</b>.
-        </p>
-        <p style="font-size:13px;color:var(--text-muted);line-height:1.6">
-          The curriculum focused on foundational <b>Basic English Grammar</b> and targeted <b>Sindh University Entry Test Preparation</b>. Instruction covered syntax (sentence types, clause boundaries), morphology (8 parts of speech, pronouns, modifiers, prepositions, conjunctions), non-finite verbs (gerunds and participles), the 12-tense timeline system, voice transformation, and reported speech.
-        </p>
-        <p style="font-size:13px;color:var(--text-muted);line-height:1.6">
-          Formative weekly assessments and grand grammar reviews yielded strong student performance. 1-on-1 diagnostic feedback conducted at Atom Academy Hyderabad systematically resolved learning gaps and built learner confidence.
+    <!-- Metadata & Quick Actions Card -->
+    <div style="background:#fcfcf9;border:1.5px solid var(--line);border-radius:var(--radius-inner);padding:20px;margin-bottom:20px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px">
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+          <span class="verify-badge" style="background:#065f46;color:#ffffff">✓ Official Verified Report</span>
+          <b style="font-size:15px;color:var(--text-main)">Atom Academy, Hyderabad | Applied Linguistics | University of Sindh, Jamshoro</b>
+        </div>
+        <p style="font-size:12.5px;color:var(--text-muted);margin:0;line-height:1.5">
+          Candidate: <b>Waliullah Magsi</b> · Host Supervisor: <b>Sir Kashif Magsi</b> · Academic Coordinator: <b>Madam Bakhtawar Jaleel</b><br>
+          Evaluation Weight: <b>50 Marks (Final Report) + 30 Marks (Viva Voce)</b> · Host Assessment: <b>20/20 Marks (Grade: Outstanding)</b>
         </p>
       </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button onclick="openDocModal('finalReport')" class="btn-primary-pill" style="font-size:12.5px;padding:9px 18px">
+          <span>📖</span> Read in Reader Modal
+        </button>
+        <a href="Waliullah_Magsi_Final_Internship_Report.pdf" download="Waliullah_Magsi_Final_Internship_Report.pdf" target="_blank" class="btn-secondary-pill" style="font-size:12.5px;padding:9px 18px">
+          <span>⬇</span> Download Official Report (PDF)
+        </a>
+      </div>
+    </div>
 
-      <div class="spec-card" style="background:#fbfbf9">
-        <b style="font-size:14px;color:var(--text-main)">🎤 Viva Voce Defense Presentation (30 Marks)</b>
-        <p style="font-size:12.5px;color:var(--text-muted);line-height:1.5">
-          5-Minute Multimedia Defense prepared for the Faculty Panel of Teachers at IELL:
-        </p>
-        <ul style="list-style:square inside;font-size:12px;color:var(--text-muted);display:flex;flex-direction:column;gap:5px;margin:6px 0">
-          <li><b>Slide 1:</b> Introduction &amp; Placement at Atom Academy Hyderabad</li>
-          <li><b>Slide 2:</b> Supervision under Sir Kashif Magsi &amp; 60h Completed Status (20/20 Marks)</li>
-          <li><b>Slide 3:</b> Basic English Grammar Course Delivery</li>
-          <li><b>Slide 4:</b> Sindh University Entry Test Preparation &amp; Mock Testing</li>
-          <li><b>Slide 5:</b> 4-Weeks Photographic Evidence, Evaluation Sheet &amp; Certificate</li>
-        </ul>
-        <div style="margin-top:6px">
-          <button class="btn-doc-view" style="width:100%" onclick="alert('Viva defense presentation slides prepared for Atom Academy Hyderabad internship.')">
-            <span>📽️</span> View Presentation Outline
-          </button>
+    <!-- 2-Column Grid: Left is Interactive Report (1.4fr), Right is Viva Voce Defense (0.8fr) -->
+    <div class="report-grid" style="grid-template-columns: 1.45fr 0.85fr; align-items: start;">
+      <!-- Left Column: Report Interactive Sections -->
+      <div>
+        <!-- Section Tabs -->
+        <div class="report-tabs">
+          <button class="report-tab-btn active" onclick="switchReportSection(0)">Complete Report (All 6 Sections)</button>
+          <button class="report-tab-btn" onclick="switchReportSection(1)">1. Introduction</button>
+          <button class="report-tab-btn" onclick="switchReportSection(2)">2. Organization Profile</button>
+          <button class="report-tab-btn" onclick="switchReportSection(3)">3. Tasks &amp; Pedagogy</button>
+          <button class="report-tab-btn" onclick="switchReportSection(4)">4. Learning Outcomes</button>
+          <button class="report-tab-btn" onclick="switchReportSection(5)">5. Challenges Faced</button>
+          <button class="report-tab-btn" onclick="switchReportSection(6)">6. Conclusion</button>
+        </div>
+
+        <div class="journal-entry-card" id="reportContentCard" style="padding:26px 22px">
+          <!-- SECTION 1 -->
+          <div id="repSec-1" class="journal-section-block" style="border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:18px">
+            <h4>📖 1. Introduction</h4>
+            <p style="margin-bottom:12px">
+              My internship at Atom Academy, Hyderabad, formed an important practical component of my undergraduate studies in Applied Linguistics at the Institute of English Language and Literature, University of Sindh, Jamshoro. The principal objective was to connect linguistic knowledge acquired at university with the realities of teaching English to learners with different levels of proficiency. Rather than studying language only as an abstract system, I had the opportunity to plan lessons, explain grammatical structures, guide reading activities, develop vocabulary, and evaluate learning through classroom assessment.
+            </p>
+            <p style="margin-bottom:12px">
+              I selected Atom Academy because its English-learning and university entry-test preparation activities offered an appropriate setting in which to practise teaching and observe students’ language needs. My responsibilities included a Basic English Grammar course and preparation for the University of Sindh entry test. I expected to improve my teaching confidence, instructional communication, lesson planning, and ability to adapt linguistic concepts to accessible classroom explanations. The internship also provided an opportunity to examine how learners respond to different teaching strategies and how regular practice can support language development.
+            </p>
+            <div class="journal-takeaways-box" style="margin-top:10px">
+              <b>💡 Key Academic Focus (Introduction):</b>
+              <ul>
+                <li>Translating university Applied Linguistics theoretical frameworks into communicative classroom practice.</li>
+                <li>Fostering lesson planning, clear instruction, and pedagogical confidence across varied proficiency levels.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- SECTION 2 -->
+          <div id="repSec-2" class="journal-section-block" style="border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:18px">
+            <h4>🏫 2. Organization Profile</h4>
+            <p style="margin-bottom:12px">
+              Atom Academy is an educational academy located in Hyderabad, Sindh. During my placement, its relevant instructional activities included Basic English Grammar teaching and preparation for the University of Sindh entry test. These programmes served learners who needed stronger foundational English skills as well as students preparing for an academic admission examination. My work was directly connected with these teaching and test-preparation activities.
+            </p>
+            <p style="margin-bottom:12px">
+              The academy provided a practical environment for lessons, reading exercises, vocabulary practice, multiple-choice-question revision, and tests. I worked as an intern teacher under host supervision, preparing and delivering lessons and monitoring student progress. The educational purpose visible in my placement was to support students’ learning and examination readiness. I have not included a formal mission statement, organizational chart, or departmental hierarchy because these were not available in the materials reviewed; those details should be confirmed with the academy before submission.
+            </p>
+            <div class="journal-takeaways-box" style="margin-top:10px">
+              <b>💡 Institutional Context (Organization Profile):</b>
+              <ul>
+                <li>Educational academy in Hyderabad delivering foundational grammar and university entrance coaching.</li>
+                <li>Small-batch setup (10 students per batch) supervised directly by host instructor Sir Kashif Magsi.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- SECTION 3 -->
+          <div id="repSec-3" class="journal-section-block" style="border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:18px">
+            <h4>📝 3. Job Description and Tasks Performed</h4>
+            <p style="margin-bottom:12px">
+              My principal responsibility was to teach English grammar while supporting students’ reading, vocabulary development, and entry-test preparation. I prepared day-wise lesson plans with learning objectives, teaching materials, activities, and reflections. The initial orientation involved introducing the course and identifying students’ starting levels through reading and basic grammar activities. This diagnostic approach helped me consider students’ existing competence before progressing to more detailed instruction.
+            </p>
+            <p style="margin-bottom:12px">
+              Throughout the internship, I taught grammatical categories and their functions, including pronouns and their types, verbs, adverbs and their types, and modal verbs. These topics were more than lists of definitions: they provided opportunities to relate <b>morphology</b>, which concerns word forms and grammatical categories, to <b>syntax</b>, which concerns how words function and combine in sentences. In explaining pronouns, for example, I could focus on reference and substitution within sentences; in verb lessons, I could discuss grammatical functions and sentence construction. Adverbs offered examples of how words modify actions and descriptions, while modal verbs provided a way to discuss meanings such as ability, possibility, and obligation. These are linguistic interpretations of the topics I taught, not a claim that every technical term was explicitly used in each lesson.
+            </p>
+            <p style="margin-bottom:12px">
+              Reading passages and daily vocabulary activities formed another regular part of my work. Students read passages, practised pronunciation and fluency, and encountered new words in meaningful contexts. These activities supported reading comprehension, lexical development, and the connection between form and meaning. I observed that students’ reading became more confident over time and that they increasingly remembered newly introduced vocabulary. Such observations were encouraging, although they were not based on standardized proficiency measurements.
+            </p>
+            <p style="margin-bottom:12px">
+              Alongside grammar teaching, I conducted multiple-choice-question practice using past papers for the University of Sindh entry test. This was a distinct strand of the internship, rather than grammar practice alone. Students revised examination-style questions and became familiar with the format and demands of the test. I also administered a weekly grammar-course test and a mixed past-paper MCQ test. Toward the end of the placement, a comprehensive grammar test provided an opportunity to review overall learning; student performance was satisfactory. My tools included the whiteboard, markers, prepared reading passages, vocabulary exercises, lesson plans, past-paper questions, and assessment records. A WhatsApp group was also introduced for academic questions and class-related communication.
+            </p>
+            <div class="journal-takeaways-box" style="margin-top:10px">
+              <b>💡 Pedagogical Alignment (Tasks Performed):</b>
+              <ul>
+                <li>Morphology &amp; Syntax integration: connecting word classes with clause boundaries and sentence roles.</li>
+                <li>Dual-track instructional schedule: grammar fundamentals alongside timed Sindh University past-paper MCQs.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- SECTION 4 -->
+          <div id="repSec-4" class="journal-section-block" style="border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:18px">
+            <h4>🎯 4. Learning Outcomes and Skills</h4>
+            <p style="margin-bottom:12px">
+              The internship strengthened my understanding of the relationship between linguistic theory and language pedagogy. At university, Applied Linguistics encourages students to examine language structure, language learning, and the social and educational contexts in which language is used. In the academy, these ideas became practical questions: How should a grammatical concept be explained? What examples will learners understand? How can a teacher identify confusion? Which activity gives students enough practice to improve?
+            </p>
+            <p style="margin-bottom:12px">
+              One important learning outcome was the application of grammatical knowledge. Teaching parts of speech required grammatical competence and the ability to transform technical descriptions into clear explanations. The concepts of morphology and syntax helped me think systematically about word classes and sentence-level functions. Vocabulary activities drew attention to lexical competence, including the recognition, retention, and contextual use of words. Reading activities highlighted comprehension and fluency, showing that understanding a passage involves more than pronouncing individual words.
+            </p>
+            <p style="margin-bottom:12px">
+              The experience also deepened my awareness of second-language learning. Students differed in confidence, prior knowledge, reading speed, and willingness to participate. This made learner-centred instruction and scaffolding especially relevant. I learned to move from simpler explanations and examples toward more demanding tasks, giving students opportunities to practise before expecting independent performance. Classroom interaction and question-and-answer exchanges supported communicative competence by encouraging students to use English to express understanding rather than merely memorize terminology.
+            </p>
+            <p style="margin-bottom:12px">
+              Assessment was another major learning area. Initial activities had a diagnostic purpose, helping me recognize learner needs. Daily questions, vocabulary revision, and MCQ practice operated as formative assessment because they offered ongoing indications of what students understood and what needed reinforcement. Weekly tests and the final comprehensive test provided more formal checks on achievement. I learned that assessment should inform subsequent teaching, not simply produce marks. Reflective lesson planning helped me identify successful activities and areas needing adjustment.
+            </p>
+            <p style="margin-bottom:12px">
+              In terms of professional skills, I developed instructional communication, time management, preparation, adaptability, and confidence in front of learners. I learned to organize a limited teaching period around grammar, reading, vocabulary, and entry-test practice without losing sight of the different objectives of each activity. Working within a supervised academy setting also improved my professional responsibility and my ability to respond constructively to students’ questions. Maintaining an e-portfolio and internship records strengthened documentation and reflective writing, allowing me to connect daily experience with broader academic learning.
+            </p>
+            <div class="journal-takeaways-box" style="margin-top:10px">
+              <b>💡 Core Competencies Developed (Learning Outcomes):</b>
+              <ul>
+                <li>Pedagogical Scaffolding &amp; Communicative Competence in ESL classroom settings.</li>
+                <li>Diagnostic, Formative, and Summative Assessment cycles to guide responsive instruction.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- SECTION 5 -->
+          <div id="repSec-5" class="journal-section-block" style="border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:18px">
+            <h4>⚖️ 5. Challenges Faced</h4>
+            <p style="margin-bottom:12px">
+              A significant challenge was the gap between knowing a linguistic concept and teaching it effectively. A university-level explanation of syntax or grammatical classification may be accurate but too abstract for beginning learners. I addressed this by using straightforward language, familiar examples, repeated explanations, and practice questions. This helped me understand <b>pedagogical content knowledge</b>: a teacher must know not only the subject but also how to make it learnable.
+            </p>
+            <p style="margin-bottom:12px">
+              Differences in student proficiency presented another challenge. Some learners could read and answer questions more confidently, while others needed additional guidance with passages and vocabulary. I responded through regular reading practice, repetition of new words, and opportunities for participation. Improvement was gradual, reminding me that language acquisition and literacy development require sustained exposure and meaningful practice rather than a single lecture.
+            </p>
+            <p style="margin-bottom:12px">
+              Balancing the Basic English Grammar course with University of Sindh entry-test preparation also required careful planning. These activities overlapped in their broad aim of strengthening English but differed in immediate purpose: grammar lessons developed conceptual understanding, whereas past-paper MCQs developed familiarity with examination tasks. I kept both strands in the daily schedule and used separate exercises and tests when appropriate. Time constraints reinforced the importance of prioritizing objectives and maintaining continuity across sessions.
+            </p>
+            <p style="margin-bottom:12px">
+              Finally, I learned that satisfactory test performance does not automatically demonstrate mastery of every aspect of language. Grammar tests and MCQs reveal useful information, but communicative ability, reading fluency, and long-term vocabulary retention also require observation over time. This realization encouraged a more balanced view of student progress and made my reflections more critical and evidence-conscious.
+            </p>
+            <div class="journal-takeaways-box" style="margin-top:10px">
+              <b>💡 Key Pedagogical Takeaways (Challenges Faced):</b>
+              <ul>
+                <li>Acquiring Pedagogical Content Knowledge (PCK) to bridge theoretical linguistics with learner accessibility.</li>
+                <li>Differentiated pacing to accommodate mixed reading fluencies and test preparation demands.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- SECTION 6 -->
+          <div id="repSec-6" class="journal-section-block">
+            <h4>🎓 6. Conclusion</h4>
+            <p style="margin-bottom:12px">
+              My internship at Atom Academy, Hyderabad, was a valuable transition from undergraduate linguistic study to practical English-language teaching. Through lesson planning, grammar instruction, reading passages, vocabulary development, entry-test MCQ practice, and classroom assessment, I gained experience in adapting theoretical knowledge to actual learner needs. The placement showed me the practical relevance of morphology, syntax, grammatical and lexical competence, reading comprehension, communicative competence, scaffolding, and formative assessment.
+            </p>
+            <p style="margin-bottom:12px">
+              Most importantly, I developed a stronger understanding of teaching as an ongoing cycle of planning, instruction, observation, assessment, and reflection. Students’ increasing confidence in reading and their satisfactory performance in the final grammar assessment were encouraging outcomes, while the challenges reminded me that effective teaching requires patience and adjustment. The internship strengthened my communication, organization, reflective practice, and professional confidence. It also reinforced my interest in applying linguistic knowledge to improve English-language learning in educational settings.
+            </p>
+            <div class="journal-takeaways-box" style="margin-top:10px">
+              <b>💡 Final Pedagogical Reflection (Conclusion):</b>
+              <ul>
+                <li>Mastery of the teaching cycle: Planning → Instruction → Observation → Assessment → Reflection.</li>
+                <li>Solidified professional foundation for future English Language Teaching and Applied Linguistics career.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Signatures Footer -->
+          <div style="margin-top:20px;padding-top:16px;border-top:1.5px dashed var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--text-muted)">
+            <div>
+              <b>Candidate:</b> Waliullah Magsi (BS Applied Linguistics)<br>
+              Institute of English Language &amp; Literature, University of Sindh
+            </div>
+            <div style="text-align:right">
+              <b>Host Supervisor:</b> Sir Kashif Magsi<br>
+              Teacher, Atom Academy Hyderabad (Total Hours: 60h)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Viva Voce Defense Presentation (30 Marks) -->
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div class="spec-card" style="background:#fbfbf9;border:1.5px solid var(--line);border-radius:var(--radius-inner);padding:22px">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:8px">
+            <b style="font-size:14.5px;color:var(--text-main)">🎤 Viva Voce Defense Presentation (30 Marks)</b>
+            <span class="verify-badge" style="background:#1e3a5f;color:#ffffff">30 Marks</span>
+          </div>
+          <p style="font-size:12.5px;color:var(--text-muted);line-height:1.5;margin-bottom:12px">
+            5-Minute Multimedia Defense prepared for the Faculty Panel of Teachers at the Institute of English Language &amp; Literature (IELL), University of Sindh, Jamshoro:
+          </p>
+          <ul style="list-style:square inside;font-size:12px;color:var(--text-muted);display:flex;flex-direction:column;gap:8px;margin:6px 0 14px">
+            <li><b>Slide 1:</b> Introduction &amp; Placement Context at Atom Academy Hyderabad</li>
+            <li><b>Slide 2:</b> Host Supervision under Sir Kashif Magsi &amp; 60h Completed Status (20/20 Marks)</li>
+            <li><b>Slide 3:</b> Basic English Grammar Delivery (Morphology to Syntax, Voice &amp; Narration)</li>
+            <li><b>Slide 4:</b> Sindh University Entry Test Coaching &amp; Past Paper MCQ Analytics (55–75 Marks)</li>
+            <li><b>Slide 5:</b> 4-Weeks Photographic Evidence, Evaluation Sheet &amp; Certificate</li>
+          </ul>
+          <div style="border-top:1px solid var(--line);padding-top:12px;margin-top:6px;font-size:12px;color:var(--text-muted);line-height:1.5">
+            <b>Allocated Coordinators (IELL):</b><br>
+            • English Language Teaching (ELT): <b>Dr. Sumera Bhanbhro</b><br>
+            • Applied Linguistics (AL): <b>Madam Bakhtawar Jaleel</b><br>
+            • English Language &amp; Literature (ELL): <b>Dr. Fozia Chandio</b>
+          </div>
+          <div style="margin-top:14px">
+            <button class="btn-doc-view" style="width:100%" onclick="openDocModal('guidelines')">
+              <span>🏛️</span> View IELL 100-Mark Rubric Framework
+            </button>
+          </div>
+        </div>
+
+        <!-- Academic Evaluation Breakdown Box -->
+        <div class="spec-card" style="background:#ffffff;border:1px solid var(--line);padding:18px">
+          <b style="font-size:13.5px;color:var(--text-main);display:block;margin-bottom:8px">📊 100-Mark Degree Evaluation Breakdown</b>
+          <table style="width:100%;border-collapse:collapse;font-size:12px">
+            <tr style="border-bottom:1px solid #f1f5f9"><td style="padding:5px 0">Host Supervisor Evaluation</td><td style="text-align:right"><b>20 Marks (20/20 ✓)</b></td></tr>
+            <tr style="border-bottom:1px solid #f1f5f9;background:#fbfbf9;font-weight:700"><td style="padding:5px 0;color:#065f46">Final Report &amp; Portfolio</td><td style="text-align:right;color:#065f46"><b>50 Marks (Submitted)</b></td></tr>
+            <tr style="border-bottom:1px solid #f1f5f9"><td style="padding:5px 0">Viva Voce Defense</td><td style="text-align:right"><b>30 Marks (Prepared)</b></td></tr>
+            <tr style="font-weight:800"><td style="padding:7px 0">Total Degree Requirement</td><td style="text-align:right"><b>100 Marks (3 Cr. Hrs)</b></td></tr>
+          </table>
         </div>
       </div>
     </div>
@@ -3277,6 +3497,21 @@ function switchJournal(num) {
   document.getElementById('journalEntry-3').style.display = (num === 3) ? 'block' : 'none';
   if (document.getElementById('journalEntry-4')) {
     document.getElementById('journalEntry-4').style.display = (num === 4) ? 'block' : 'none';
+  }
+}
+
+// Report Tab Switching (All 6 Sections or Individual)
+function switchReportSection(sec) {
+  var btns = document.querySelectorAll('.report-tab-btn');
+  btns.forEach(function(b, idx) {
+    b.classList.toggle('active', idx === sec);
+  });
+
+  for (var i = 1; i <= 6; i++) {
+    var block = document.getElementById('repSec-' + i);
+    if (block) {
+      block.style.display = (sec === 0 || sec === i) ? 'block' : 'none';
+    }
   }
 }
 
@@ -3473,6 +3708,47 @@ function openDocModal(type) {
       + '<p style="margin-bottom:14px">On Saturday, the final day of my internship, I conducted a challenging grand test covering the grammar topics taught during the course. Students\' overall performance was satisfactory. Looking back on the internship, I am pleased with the progress students made, particularly in their ability to introduce themselves, participate in English activities, and apply grammar concepts. This experience strengthened my confidence as a trainee teacher and helped me understand the importance of continuous practice, learner participation, supportive feedback, and practical application of linguistic teaching principles.</p>'
       + '<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">'
       + '<a href="Waliullah_Internship_Weekly_Reflective_Log_Week_04.pdf" download="Waliullah_Internship_Weekly_Reflective_Log_Week_04.pdf" target="_blank" class="btn-primary-pill" style="font-size:12.5px;padding:9px 16px"><span>⬇</span> Download Week 04 Official PDF</a>'
+      + '</div>';
+  } else if (type === 'finalReport') {
+    title.innerText = "Final Internship Report (50 Marks)";
+    sub.innerText = "Atom Academy, Hyderabad | Applied Linguistics | University of Sindh, Jamshoro";
+    dl.href = "Waliullah_Magsi_Final_Internship_Report.pdf";
+    dl.setAttribute('download', 'Waliullah_Magsi_Final_Internship_Report.pdf');
+    body.innerHTML = '<div style="background:#fcfcf9;padding:14px;border-radius:10px;border:1px solid var(--line);margin-bottom:14px">'
+      + '<span class="verify-badge" style="background:#065f46;color:#ffffff">✓ Official Verified Report</span> '
+      + '<b style="color:var(--text-main);font-size:14.5px;margin-left:8px">Atom Academy, Hyderabad | Applied Linguistics | University of Sindh, Jamshoro</b><br>'
+      + '<span style="font-size:12.5px;color:var(--text-muted)">Candidate: <b>Waliullah Magsi</b> &nbsp;|&nbsp; Host Supervisor: <b>Sir Kashif Magsi</b> &nbsp;|&nbsp; Academic Coordinator: <b>Madam Bakhtawar Jaleel</b></span>'
+      + '</div>'
+      + '<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px">'
+      + '<a href="Waliullah_Magsi_Final_Internship_Report.pdf" download="Waliullah_Magsi_Final_Internship_Report.pdf" target="_blank" class="btn-primary-pill" style="font-size:12.5px;padding:9px 16px"><span>⬇</span> Download Official Report (PDF)</a>'
+      + '</div>'
+      + '<h4 style="color:var(--text-main);margin-bottom:6px">1. Introduction</h4>'
+      + '<p style="margin-bottom:12px">My internship at Atom Academy, Hyderabad, formed an important practical component of my undergraduate studies in Applied Linguistics at the Institute of English Language and Literature, University of Sindh, Jamshoro. The principal objective was to connect linguistic knowledge acquired at university with the realities of teaching English to learners with different levels of proficiency. Rather than studying language only as an abstract system, I had the opportunity to plan lessons, explain grammatical structures, guide reading activities, develop vocabulary, and evaluate learning through classroom assessment.</p>'
+      + '<p style="margin-bottom:16px">I selected Atom Academy because its English-learning and university entry-test preparation activities offered an appropriate setting in which to practise teaching and observe students’ language needs. My responsibilities included a Basic English Grammar course and preparation for the University of Sindh entry test. I expected to improve my teaching confidence, instructional communication, lesson planning, and ability to adapt linguistic concepts to accessible classroom explanations. The internship also provided an opportunity to examine how learners respond to different teaching strategies and how regular practice can support language development.</p>'
+      + '<h4 style="color:var(--text-main);margin-bottom:6px">2. Organization Profile</h4>'
+      + '<p style="margin-bottom:12px">Atom Academy is an educational academy located in Hyderabad, Sindh. During my placement, its relevant instructional activities included Basic English Grammar teaching and preparation for the University of Sindh entry test. These programmes served learners who needed stronger foundational English skills as well as students preparing for an academic admission examination. My work was directly connected with these teaching and test-preparation activities.</p>'
+      + '<p style="margin-bottom:16px">The academy provided a practical environment for lessons, reading exercises, vocabulary practice, multiple-choice-question revision, and tests. I worked as an intern teacher under host supervision, preparing and delivering lessons and monitoring student progress. The educational purpose visible in my placement was to support students’ learning and examination readiness. I have not included a formal mission statement, organizational chart, or departmental hierarchy because these were not available in the materials reviewed; those details should be confirmed with the academy before submission.</p>'
+      + '<h4 style="color:var(--text-main);margin-bottom:6px">3. Job Description and Tasks Performed</h4>'
+      + '<p style="margin-bottom:12px">My principal responsibility was to teach English grammar while supporting students’ reading, vocabulary development, and entry-test preparation. I prepared day-wise lesson plans with learning objectives, teaching materials, activities, and reflections. The initial orientation involved introducing the course and identifying students’ starting levels through reading and basic grammar activities. This diagnostic approach helped me consider students’ existing competence before progressing to more detailed instruction.</p>'
+      + '<p style="margin-bottom:12px">Throughout the internship, I taught grammatical categories and their functions, including pronouns and their types, verbs, adverbs and their types, and modal verbs. These topics were more than lists of definitions: they provided opportunities to relate morphology, which concerns word forms and grammatical categories, to syntax, which concerns how words function and combine in sentences. In explaining pronouns, for example, I could focus on reference and substitution within sentences; in verb lessons, I could discuss grammatical functions and sentence construction. Adverbs offered examples of how words modify actions and descriptions, while modal verbs provided a way to discuss meanings such as ability, possibility, and obligation. These are linguistic interpretations of the topics I taught, not a claim that every technical term was explicitly used in each lesson.</p>'
+      + '<p style="margin-bottom:12px">Reading passages and daily vocabulary activities formed another regular part of my work. Students read passages, practised pronunciation and fluency, and encountered new words in meaningful contexts. These activities supported reading comprehension, lexical development, and the connection between form and meaning. I observed that students’ reading became more confident over time and that they increasingly remembered newly introduced vocabulary. Such observations were encouraging, although they were not based on standardized proficiency measurements.</p>'
+      + '<p style="margin-bottom:16px">Alongside grammar teaching, I conducted multiple-choice-question practice using past papers for the University of Sindh entry test. This was a distinct strand of the internship, rather than grammar practice alone. Students revised examination-style questions and became familiar with the format and demands of the test. I also administered a weekly grammar-course test and a mixed past-paper MCQ test. Toward the end of the placement, a comprehensive grammar test provided an opportunity to review overall learning; student performance was satisfactory. My tools included the whiteboard, markers, prepared reading passages, vocabulary exercises, lesson plans, past-paper questions, and assessment records. A WhatsApp group was also introduced for academic questions and class-related communication.</p>'
+      + '<h4 style="color:var(--text-main);margin-bottom:6px">4. Learning Outcomes and Skills</h4>'
+      + '<p style="margin-bottom:12px">The internship strengthened my understanding of the relationship between linguistic theory and language pedagogy. At university, Applied Linguistics encourages students to examine language structure, language learning, and the social and educational contexts in which language is used. In the academy, these ideas became practical questions: How should a grammatical concept be explained? What examples will learners understand? How can a teacher identify confusion? Which activity gives students enough practice to improve?</p>'
+      + '<p style="margin-bottom:12px">One important learning outcome was the application of grammatical knowledge. Teaching parts of speech required grammatical competence and the ability to transform technical descriptions into clear explanations. The concepts of morphology and syntax helped me think systematically about word classes and sentence-level functions. Vocabulary activities drew attention to lexical competence, including the recognition, retention, and contextual use of words. Reading activities highlighted comprehension and fluency, showing that understanding a passage involves more than pronouncing individual words.</p>'
+      + '<p style="margin-bottom:12px">The experience also deepened my awareness of second-language learning. Students differed in confidence, prior knowledge, reading speed, and willingness to participate. This made learner-centred instruction and scaffolding especially relevant. I learned to move from simpler explanations and examples toward more demanding tasks, giving students opportunities to practise before expecting independent performance. Classroom interaction and question-and-answer exchanges supported communicative competence by encouraging students to use English to express understanding rather than merely memorize terminology.</p>'
+      + '<p style="margin-bottom:12px">Assessment was another major learning area. Initial activities had a diagnostic purpose, helping me recognize learner needs. Daily questions, vocabulary revision, and MCQ practice operated as formative assessment because they offered ongoing indications of what students understood and what needed reinforcement. Weekly tests and the final comprehensive test provided more formal checks on achievement. I learned that assessment should inform subsequent teaching, not simply produce marks. Reflective lesson planning helped me identify successful activities and areas needing adjustment.</p>'
+      + '<p style="margin-bottom:16px">In terms of professional skills, I developed instructional communication, time management, preparation, adaptability, and confidence in front of learners. I learned to organize a limited teaching period around grammar, reading, vocabulary, and entry-test practice without losing sight of the different objectives of each activity. Working within a supervised academy setting also improved my professional responsibility and my ability to respond constructively to students’ questions. Maintaining an e-portfolio and internship records strengthened documentation and reflective writing, allowing me to connect daily experience with broader academic learning.</p>'
+      + '<h4 style="color:var(--text-main);margin-bottom:6px">5. Challenges Faced</h4>'
+      + '<p style="margin-bottom:12px">A significant challenge was the gap between knowing a linguistic concept and teaching it effectively. A university-level explanation of syntax or grammatical classification may be accurate but too abstract for beginning learners. I addressed this by using straightforward language, familiar examples, repeated explanations, and practice questions. This helped me understand pedagogical content knowledge: a teacher must know not only the subject but also how to make it learnable.</p>'
+      + '<p style="margin-bottom:12px">Differences in student proficiency presented another challenge. Some learners could read and answer questions more confidently, while others needed additional guidance with passages and vocabulary. I responded through regular reading practice, repetition of new words, and opportunities for participation. Improvement was gradual, reminding me that language acquisition and literacy development require sustained exposure and meaningful practice rather than a single lecture.</p>'
+      + '<p style="margin-bottom:12px">Balancing the Basic English Grammar course with University of Sindh entry-test preparation also required careful planning. These activities overlapped in their broad aim of strengthening English but differed in immediate purpose: grammar lessons developed conceptual understanding, whereas past-paper MCQs developed familiarity with examination tasks. I kept both strands in the daily schedule and used separate exercises and tests when appropriate. Time constraints reinforced the importance of prioritizing objectives and maintaining continuity across sessions.</p>'
+      + '<p style="margin-bottom:16px">Finally, I learned that satisfactory test performance does not automatically demonstrate mastery of every aspect of language. Grammar tests and MCQs reveal useful information, but communicative ability, reading fluency, and long-term vocabulary retention also require observation over time. This realization encouraged a more balanced view of student progress and made my reflections more critical and evidence-conscious.</p>'
+      + '<h4 style="color:var(--text-main);margin-bottom:6px">6. Conclusion</h4>'
+      + '<p style="margin-bottom:12px">My internship at Atom Academy, Hyderabad, was a valuable transition from undergraduate linguistic study to practical English-language teaching. Through lesson planning, grammar instruction, reading passages, vocabulary development, entry-test MCQ practice, and classroom assessment, I gained experience in adapting theoretical knowledge to actual learner needs. The placement showed me the practical relevance of morphology, syntax, grammatical and lexical competence, reading comprehension, communicative competence, scaffolding, and formative assessment.</p>'
+      + '<p style="margin-bottom:16px">Most importantly, I developed a stronger understanding of teaching as an ongoing cycle of planning, instruction, observation, assessment, and reflection. Students’ increasing confidence in reading and their satisfactory performance in the final grammar assessment were encouraging outcomes, while the challenges reminded me that effective teaching requires patience and adjustment. The internship strengthened my communication, organization, reflective practice, and professional confidence. It also reinforced my interest in applying linguistic knowledge to improve English-language learning in educational settings.</p>'
+      + '<div style="margin-top:20px;padding:12px;background:#fafaf8;border:1px solid var(--line);border-radius:8px;font-size:12px">'
+      + '<b>Endorsement:</b> Supervised by Sir Kashif Magsi (Atom Academy) &middot; Coordinated by Madam Bakhtawar Jaleel (IELL, University of Sindh) &middot; Hours: 60h Completed (20/20 Marks)'
       + '</div>';
   } else if (type === 'guidelines') {
     title.innerText = "IELL Internship Guidelines & Framework";
